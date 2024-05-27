@@ -12,4 +12,7 @@
 2. Sometimes in questions of Yes or No, you do not have to look for every edge case, instead look to more vulnerable one and rest all cases will fall in other one.
   Example - https://codeforces.com/problemset/problem/1878/A
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-3. 
+3. If you are getting TLE and you think that algo is good, then try applying precomputation technique. It will work sometimes because precomputing at constraind length and storing your answers 
+in vector saves much time if compared to brute worst case. By precomputation you are now just required to print you answer only in constant or linear time.
+  Example - https://codeforces.com/problemset/problem/1766/A
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
