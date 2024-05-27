@@ -1,1 +1,5 @@
+1. For questions related to parity(odd, even), try to come up with solution by analyzing odd as 1 and even as 0. For example in an array having even frequency of odd numbers, it is always
+  possible to divide array in two parts such that sum of both parts will have same parity.
+  EXAMPLE - https://codeforces.com/problemset/problem/1857/A
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
