@@ -1,3 +1,7 @@
+
+0. Do not forget to observe the range of input values. Accordingly decide the data type. For example interger can store upto 1e9, long can store upto 1e12 and long long can store upto 1e18.
+   Also note that most questions should be solved within 1s of time, which happens only if your max intraion is of the order of 1e7.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1. We can use inbuilt map data structure to store frequency of each element of an array or vector while taking the input from user:-
