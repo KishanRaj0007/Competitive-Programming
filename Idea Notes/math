@@ -1,15 +1,15 @@
 
 1. For questions related to parity(odd, even), try to come up with solution by analyzing odd as 1 and even as 0. For example in an array having even frequency of odd numbers, it is always
   possible to divide array in two parts such that sum of both parts will have same parity.
-  EXAMPLE - https://codeforces.com/problemset/problem/1857/A
 
+  EXAMPLE - https://codeforces.com/problemset/problem/1857/A
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2. To find the length of largest interval  [l,r](which isr-l+1) of positive integers(consecutive) such that, for every i in the interval (i.e., l≤i≤r), n is a multiple of i or i is a factor of n,
    we will simplify the problem by focussing on intervals starting from 1. If you find smallest integer x that does not divide n then the length of interval [1, x-1] which is ((x-1) - 1 +1) = x-1
    is the required length.
- In other words among a list of factors of a numbers, chances of getting maximum length of consecutive factors that divide a number is good if we start from beginning, this is because as 
- we move ahead difference between factors increase. For example factors of 40 are 1,2,4,5,8,10,20,40. See that SENSE OF CONSECUTIVENESS DECREASES AS WE MOVE FAR AWAY SINCE DIFFERENCE BETWEEN 
-FACTORS INCREASES AS WE MOVE FROM LEFT TO RIGHT. So maximum length of consecutive factors WILL SURELY APPEAR AT THE BEGINNING.
+   In other words among a list of factors of a numbers, chances of getting maximum length of consecutive factors that divide a number is good if we start from beginning, this is because as 
+   we move ahead difference between factors increase. For example factors of 40 are 1,2,4,5,8,10,20,40. See that SENSE OF CONSECUTIVENESS DECREASES AS WE MOVE FAR AWAY SINCE DIFFERENCE BETWEEN 
+   FACTORS INCREASES AS WE MOVE FROM LEFT TO RIGHT. So maximum length of consecutive factors WILL SURELY APPEAR AT THE BEGINNING.
 
 EXAMPLE - https://codeforces.com/problemset/problem/1855/B
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
