@@ -19,6 +19,6 @@ in x. If the substring s is not found, find returns a special constant value std
 
 3.  Suppose there is a string 10111010. Let l points to first index, and r points to last index. On iterating l towards right and r towards left simultaneously, at any point the value of
     r-l+1 will give the length of substring starting from l till r.
-   EXAMPLE:- https://codeforces.com/problemset/problem/1791/C
 
+   EXAMPLE:- https://codeforces.com/problemset/problem/1791/C
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
