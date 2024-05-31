@@ -109,4 +109,7 @@ Thus, the time complexity per test case is 𝑂(𝑚), and for 𝑡 test cases, 
       ans = max(ans,count);
     }
 
+https://codeforces.com/problemset/problem/1850/D
+https://codeforces.com/problemset/problem/1837/B
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
