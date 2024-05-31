@@ -10,7 +10,8 @@
 
 1. We can use inbuilt map data structure to store frequency of each element of an array or vector while taking the input from user:-
 
-  Example - https://codeforces.com/problemset/problem/1890/A
+  https://codeforces.com/problemset/problem/1890/A
+  https://codeforces.com/problemset/problem/1807/D
 
   map<int, int> freq;
         int x;
