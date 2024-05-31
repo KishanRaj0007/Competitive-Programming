@@ -100,4 +100,13 @@ For each test case, we count how many precomputed numbers are ≤𝑛. This is �
 Thus, the time complexity per test case is 𝑂(𝑚), and for 𝑡 test cases, the total time complexity is 𝑂(𝑡⋅𝑚). Since 𝑚 is a small constant, this simplifies to 𝑂(𝑡).
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. TRACKING MAXIMUM SUBARRAY LENGTH SATISFYING SOME CONDITION.
+   int ans = 1;
+   int count = 1;
+   for(int i = 0;i<n; ++i){
+      if(condition) count++;
+      else count = 1
+      ans = max(ans,count);
+    }
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
