@@ -30,7 +30,7 @@ EXAMPLE - https://codeforces.com/problemset/problem/1855/B
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 5. Whenever you encounter a problem that involves maximizing distances within a rectangular grid, especially with constraints on movement to adjacent cells:the optimal strategy involves placing 
    these points in opposite corners of the grid. This is because the longest possible distance in a rectangular grid is achieved by traversing the perimeter of the grid from one corner to the
-   opposite corner.
+   opposite corner.  (the distance always being 2⋅(n−1)+2⋅(m−1)).
 
    https://codeforces.com/problemset/problem/1537/B   -   (In this question output of test cases are incorrectly given)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
