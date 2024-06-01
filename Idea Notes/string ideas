@@ -22,3 +22,11 @@ in x. If the substring s is not found, find returns a special constant value std
 
    EXAMPLE:- https://codeforces.com/problemset/problem/1791/C
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Kishan's Dublet SubString Paradox
+Theorem:
+The frequency of the substring "ab" is equal to the frequency of the substring "ba" in a string composed solely of characters 'a' and 'b' if and only if the first and last characters 
+of the string are the same. 
+If the frequencies are not equal, this equality can be achieved by reversing either the first or the last character of the string.
+
+  https://codeforces.com/problemset/problem/1606/A
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
