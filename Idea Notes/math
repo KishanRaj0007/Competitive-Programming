@@ -34,8 +34,10 @@ EXAMPLE - https://codeforces.com/problemset/problem/1855/B
 
    https://codeforces.com/problemset/problem/1537/B   -   (In this question output of test cases are incorrectly given)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6. For two numbers a and b, if you want to maximize the gcd of a and b by simultaneously increasing OR decreasing(either one of them) a and b by 1, then maximum gcd possible is abs(a-b)
 
-
+   https://codeforces.com/problemset/problem/1543/A
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
