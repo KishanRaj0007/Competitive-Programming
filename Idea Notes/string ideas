@@ -28,5 +28,40 @@ The frequency of the substring "ab" is equal to the frequency of the substring "
 of the string are the same. 
 If the frequencies are not equal, this equality can be achieved by reversing either the first or the last character of the string.
 
+Example - s = "abababa"
+Here, the first and last characters are both 'a'. The frequency of substring 'ab' is 3, and the frequency of substring 'ba' is also 3. So, the statement holds true for this example.
+
+Example s = "abababb"
+Here, the first character is 'a' and the last character is 'b'. The frequency of substring 'ab' is 3, and the frequency of substring 'ba' is 2. According to the statement, we should reverse either
+the first or last character. Let's reverse the last character:
+
+s' = "abababa"
+Now, the frequency of substring 'ab' is 3, and the frequency of substring 'ba' is also 3. So, the statement holds true for this example after the suggested modification.
+
+#include "bits/stdc++.h"
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--){
+        string s;
+        cin >> s;
+        if(s[0] == s[s.length()-1]){
+            cout << s << endl;
+            continue;
+        }
+        if(s[0] == 'a'){
+            s[0] = 'b';
+        }
+        else{
+            s[0] = 'a';
+        }
+        cout << s << endl;
+    }
+}
+
+
   https://codeforces.com/problemset/problem/1606/A
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
