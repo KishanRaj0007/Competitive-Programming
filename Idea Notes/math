@@ -40,7 +40,7 @@ EXAMPLE - https://codeforces.com/problemset/problem/1855/B
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 7. For 32-bit integers, use int or int32_t.
    For 64-bit integers, use long long or int64_t.
-   For unsigned 32-bit integers, use uint32_t.
+   For unsigned 32-bit integers, use uint32_t.  (In C++, the unsigned keyword is used to declare an integer type that can only represent non-negative values.)
    For unsigned 64-bit integers, use uint64_t.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
