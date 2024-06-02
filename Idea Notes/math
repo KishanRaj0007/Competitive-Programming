@@ -92,7 +92,8 @@ bool hasOddDivisorGreaterThanOne(long long n) {
     https://codeforces.com/problemset/problem/1475/A
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 10. [(a+b)/x] <= [a/x]+[b/x]
-    [] - round it up to the nearest integer
+    [] - ceil function
+    Do not forget to take x in float data type otherwise c++ will automatically round it. 
 
     https://codeforces.com/problemset/problem/1471/A
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
