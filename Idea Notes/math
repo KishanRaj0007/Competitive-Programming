@@ -78,6 +78,18 @@ int main() {
 9. For finding divisors iterate from 1 to root n for each number i in this range. Check if i is divisor of n, if i is divisor then n/i is also a divisor. Collect both i and n/i as 
    divisor. Handle the edge case when both i and n/i is same to avoid duplicates(it can be done using sets).
 
+  Shortcut to check if a number has odd divisor:-
+  // Function to check if n has an odd divisor greater than 1
+bool hasOddDivisorGreaterThanOne(long long n) {
+    // Keep dividing n by 2 while it is even
+    while (n % 2 == 0) {
+        n /= 2;
+    }
+    // After all divisions by 2, if n becomes 1, it had no odd divisors
+    // If n is greater than 1, it means there was an odd divisor
+    return n > 1;
+}
+    https://codeforces.com/problemset/problem/1475/A
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
