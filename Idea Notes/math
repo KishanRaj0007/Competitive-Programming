@@ -43,9 +43,42 @@ EXAMPLE - https://codeforces.com/problemset/problem/1855/B
    For unsigned 32-bit integers, use uint32_t.  (In C++, the unsigned keyword is used to declare an integer type that can only represent non-negative values.)
    For unsigned 64-bit integers, use uint64_t.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8. PRIME FACTORIZATION :- 
+
+   #include<bits/stdc++.h>
+    using namespace std;
+
+const int N = 0;
+
+void findPrimeFactors(long long n){
+    vector<long long> x;
+    //the smallest divisor of a number is always prime except 1
+    for (long long i = 2; i*i <= n ; ++i)
+    {
+        while(n% i == 0){
+            x.push_back(i);
+            n = n/i;
+        }
+    }
+    // if n == 1 it means n has only even factors
+    if(n > 1) x.push_back(n);
+    for(auto a : x){
+        cout << a << " ";
+    }
+}
 
 
+int main() {
+    long long n;
+    cin >> n;
+    findPrimeFactors(n);
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+9. For finding divisors iterate from 1 to root n for each number i in this range. Check if i is divisor of n, if i is divisor then n/i is also a divisor. Collect both i and n/i as 
+   divisor. Handle the edge case when both i and n/i is same to avoid duplicates(it can be done using sets).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
