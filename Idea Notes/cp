@@ -20,6 +20,11 @@
             cin >> x;
             freq[x]++;
         }
+//to find maximum frequency(alternatively we can find key with maximum frequency)
+int maxFreq = 0;
+        for (auto &[x, y] : freq) {
+            maxFreq = max(maxFreq, y);
+        }
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Sometimes in questions of Yes or No, you do not have to look for every edge case, instead look to more vulnerable one and rest all cases will fall in other one.
