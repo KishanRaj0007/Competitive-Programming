@@ -5,6 +5,7 @@
    c.> You should also not forget to clear the vector or map after each test case using mp.clear() or arr.clear()
    d.> When you declare int sum; its initial value is indeterminate, meaning it could contain any random value. So initialize it to sum = 0 before proceeding to code logic.
    e.> Store value of boolean expression in bool data type and not in int data type(Example - https://www.codechef.com/START136D/problems/FIRSTGEO)
+   f.>We should use int a = s[i] - 'a' to convert the character to an index from 0 to 25 where s[i] is indexing of some string.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
