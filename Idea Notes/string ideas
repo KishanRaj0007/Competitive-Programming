@@ -69,8 +69,8 @@ int main()
 
      https://codeforces.com/contest/1883/problem/B
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-.
-
+6.> To cound distinct letters or characters use set(for sorting purpose) or unordered_set.
+     https://codeforces.com/problemset/problem/1791/D
 
 
 
