@@ -7,6 +7,10 @@
    e.> Store value of boolean expression in bool data type and not in int data type(Example - https://www.codechef.com/START136D/problems/FIRSTGEO)
    f.>We should use int a = s[i] - 'a' to convert the character to an index from 0 to 25 where s[i] is indexing of some string.
    g.>vector<int> arr(n, 0) initializes a vector named arr with n elements, all set to 0
+   h.> ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    It ensures faster input and output operations, which is crucial for handling large input sizes efficiently.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
