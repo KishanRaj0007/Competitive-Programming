@@ -11,6 +11,7 @@
     cin.tie(nullptr);
     cout.tie(nullptr);
     It ensures faster input and output operations, which is crucial for handling large input sizes efficiently.
+   i.> vector<vector<int>> grid(n, vector<int>(m)); //for 2d array
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
