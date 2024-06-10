@@ -50,39 +50,7 @@ https://codeforces.com/problemset/problem/1828/B
    -For unsigned 32-bit integers, use uint32_t.  (In C++, the unsigned keyword is used to declare an integer type that can only represent non-negative values.)
    -For unsigned 64-bit integers, use uint64_t.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## PRIME FACTORIZATION :- 
-     ```cpp
-     #include<bits/stdc++.h>
-      using namespace std;
-
-      const int N = 0;
-
-      void findPrimeFactors(long long n){
-       vector<long long> x;
-       //the smallest divisor of a number is always prime except 1
-       for (long long i = 2; i*i <= n ; ++i)
-       {
-         while(n% i == 0){
-               x.push_back(i);
-               n = n/i;
-           }
-       }
-       // if n == 1 it means n has only even factors
-       if(n > 1) x.push_back(n);
-       for(auto a : x){
-           cout << a << " ";
-       }
-   }
-
-
-  int main() {
-    long long n;
-    cin >> n;
-    findPrimeFactors(n);
-   }
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-9. For finding divisors iterate from 1 to root n for each number i in this range. Check if i is divisor of n, if i is divisor then n/i is also a divisor. Collect both i and n/i as 
+8. For finding divisors iterate from 1 to root n for each number i in this range. Check if i is divisor of n, if i is divisor then n/i is also a divisor. Collect both i and n/i as 
    divisor. Handle the edge case when both i and n/i is same to avoid duplicates(it can be done using sets).
    ```cpp
      Shortcut to check if a number has odd divisor:-
@@ -96,33 +64,63 @@ https://codeforces.com/problemset/problem/1828/B
        // If n is greater than 1, it means there was an odd divisor
        return n > 1;
    }
+
 https://codeforces.com/problemset/problem/1475/A
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-10. -[(a+b)/x] <= [a/x]+[b/x]
+9. -[(a+b)/x] <= [a/x]+[b/x]
     -[] - ceil function
     -Do not forget to take x in float data type otherwise c++ will automatically round it. 
 
     https://codeforces.com/problemset/problem/1471/A
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    ## Minimum LCM
+10.  ## Minimum LCM
    -If b%a==0, then LCM(a,b)=b < n where n = a+b.
    -If b % a≠0, then LCM(a,b) is at least 2b, and b is at least n/2, so in this case, the answer is at least n where n = a+b
    -If a and b are numbers such that a+b = n then minimum lcm of a and b is possible if a is first factor of n and b=n-a.
        (https://codeforces.com/problemset/problem/1765/M)   
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-12. -k*b <= (∑⌊a/k⌋ = b) <= k*b + (k-1)*n. where [] means rounding off and summation a/k = [a1/k]+[a2/k]+....[an/k] = b
+11. -k*b <= (∑⌊a/k⌋ = b) <= k*b + (k-1)*n. where [] means rounding off and summation a/k = [a1/k]+[a2/k]+....[an/k] = b
     https://codeforces.com/problemset/problem/1715/B
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Linear Diophantine Equations
+12. ## Linear Diophantine Equations
    Given three integers a, b, c representing a linear equation of the form : ax + by = c. Determine if the equation has a solution such that x and y are both integral values.
 
    -Find GCD of a and b
    -Check if c % GCD(a ,b) ==0
    -If yes then print Possible
    -Else print Not Possible
+   --------------------------------------------------------------------------------------
+ 
+   ## Prime Factorization
+   
+      #include<bits/stdc++.h>
+      using namespace std;
+      
+      const int N = 0;
+      
+      void findPrimeFactors(long long n){
+          vector<long long> x;
+          //the smallest divisor of a number is always prime except 1
+          for (long long i = 2; i * i <= n; ++i) {
+              while(n % i == 0){
+                  x.push_back(i);
+                  n = n / i;
+              }
+          }
+          // if n > 1 it means n has only even factors
+          if(n > 1) x.push_back(n);
+          for(auto a : x){
+              cout << a << " ";
+          }
+      }
+   
+      int main() {
+          long long n;
+          cin >> n;
+          findPrimeFactors(n);
+      }
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
