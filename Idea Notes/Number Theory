@@ -112,7 +112,15 @@ bool hasOddDivisorGreaterThanOne(long long n) {
     https://codeforces.com/problemset/problem/1715/B
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+13. Linear Diophantine Equations
+   Given three integers a, b, c representing a linear equation of the form : ax + by = c. Determine if the equation has a solution such that x and y are both integral values.
 
+   Find GCD of a and b
+   Check if c % GCD(a ,b) ==0
+   If yes then print Possible
+   Else print Not Possible
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
