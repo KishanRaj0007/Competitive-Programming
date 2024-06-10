@@ -94,7 +94,7 @@ https://codeforces.com/problemset/problem/1765/M
  
    ## Prime Factorization
    
-   ```cpp
+    ```cpp
       #include<bits/stdc++.h>
       using namespace std;
       
