@@ -208,6 +208,7 @@ https://codeforces.com/problemset/problem/1765/M
       	segmentedSieve(low, high);
       }
 ---
+16. ## Euler's Totient Function
 
 
 
