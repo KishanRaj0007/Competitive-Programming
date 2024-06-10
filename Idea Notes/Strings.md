@@ -39,7 +39,6 @@ the first or last character. Let's reverse the last character:
 s' = "abababa"
 Now, the frequency of substring 'ab' is 3, and the frequency of substring 'ba' is also 3. So, the statement holds true for this example after the suggested modification.
 
-    ```cpp
              #include "bits/stdc++.h"
               using namespace std;
               int main()
@@ -65,14 +64,14 @@ Now, the frequency of substring 'ab' is 3, and the frequency of substring 'ba' i
 ---
 https://codeforces.com/problemset/problem/1606/A
 ---
-5.>## Pallindrome String
+5. ## Pallindrome String
 
 A string s can be rearranged to form a palindrome if and only if "the number of letters with odd occurrences is not greater than 1".
 
-     https://codeforces.com/contest/1883/problem/B
+https://codeforces.com/contest/1883/problem/B
 ---
-6.> To cound distinct letters or characters use set(for sorting purpose) or unordered_set.
-     https://codeforces.com/problemset/problem/1791/D
+6. To cound distinct letters or characters use set(for sorting purpose) or unordered_set.
+https://codeforces.com/problemset/problem/1791/D
 ---
 
 
