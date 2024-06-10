@@ -1,33 +1,35 @@
 # NUMBER THEORY
 
-## BASICS:-
-   1.> int = long int < float < long long int < double < long double in terms of size or range of values it can store.
-   if you want 3.5--> 4 then use round((float)7/2) or round(7.0/2)
+## BASICS
 
-  For questions related to parity(odd, even), try to come up with solution by analyzing odd as 1 and even as 0. For example in an array having even frequency of odd numbers, it is always
-  possible to divide array in two parts such that sum of both parts will have same parity.
-  EXAMPLE - https://codeforces.com/problemset/problem/1857/A
-  
-  In case of binary string, if you replace 0 with -1 and 1 with 1, then substring which makes sum 0 is having same number of 0 and 1.
+1. **Type Hierarchy**:
+   - `int = long int < float < long long int < double < long double` in terms of size or range of values it can store.
+   - If you want `3.5` to `4`, then use `round((float)7/2)` or `round(7.0/2)`.
 
-2. To find the length of largest interval  [l,r](which isr-l+1) of positive integers(consecutive) such that, for every i in the interval (i.e., l≤i≤r), n is a multiple of i or i is a
-   factor of n, we will simplify the problem by focussing on intervals starting from 1. If you find smallest integer x that does not divide n then the length of interval [1, x-1] which is
-   ((x-1) - 1 +1) = x-1 is the required length.
-   In other words among a list of factors of a numbers, chances of getting maximum length of consecutive factors that divide a number is good if we start from beginning, this is because as 
-   we move ahead difference between factors increase. For example factors of 40 are 1,2,4,5,8,10,20,40. See that SENSE OF CONSECUTIVENESS DECREASES AS WE MOVE FAR AWAY SINCE DIFFERENCE BETWEEN 
-   FACTORS INCREASES AS WE MOVE FROM LEFT TO RIGHT. So maximum length of consecutive factors WILL SURELY APPEAR AT THE BEGINNING.
+   For questions related to parity (odd, even), try to come up with a solution by analyzing odd as 1 and even as 0. For example, in an array having even frequency of odd numbers, it is always possible to divide the array into two parts such that the sum of both parts will have the same parity.
 
-EXAMPLE - https://codeforces.com/problemset/problem/1855/B
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-3. To claculate gcd of list of numbers stored in vector, we can find pair wise gcd. Result will be same.
-'''markdown
-        int ans = 0;
-        for (int i = 1; i <= n; ++i)
-        {
-            int x;
-            cin >> x;
-            ans = __gcd(ans, abs(x-i));
-        }
+   **Example**: [Codeforces Problem 1857/A](https://codeforces.com/problemset/problem/1857/A)
+
+   In the case of a binary string, if you replace `0` with `-1` and `1` with `1`, then the substring which makes the sum `0` is having the same number of `0` and `1`.
+
+2. **Interval of Positive Integers**:
+   To find the length of the largest interval `[l, r]` (which is `r - l + 1`) of positive integers (consecutive) such that, for every `i` in the interval (i.e., `l ≤ i ≤ r`), `n` is a multiple of `i` or `i` is a factor of `n`, we will simplify the problem by focusing on intervals starting from 1. If you find the smallest integer `x` that does not divide `n`, then the length of the interval `[1, x-1]` which is `((x-1) - 1 + 1) = x-1` is the required length.
+
+   In other words, among a list of factors of a number, chances of getting the maximum length of consecutive factors that divide a number is good if we start from the beginning. This is because as we move ahead, the difference between factors increases. For example, factors of 40 are 1, 2, 4, 5, 8, 10, 20, 40. See that the sense of consecutiveness decreases as we move far away since the difference between factors increases as we move from left to right. So, the maximum length of consecutive factors will surely appear at the beginning.
+
+   **Example**: [Codeforces Problem 1855/B](https://codeforces.com/problemset/problem/1855/B)
+
+3. **Calculate GCD**:
+   To calculate the GCD of a list of numbers stored in a vector, we can find pairwise GCD. The result will be the same.
+
+   ```cpp
+   int ans = 0;
+   for (int i = 1; i <= n; ++i) {
+       int x;
+       cin >> x;
+       ans = __gcd(ans, abs(x-i));
+   }
+
 
     https://codeforces.com/problemset/problem/1828/B
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
