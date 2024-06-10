@@ -1,17 +1,19 @@
 
 0. # SILLY MISTAKES
-   a.> Do not forget to observe the range of input values. Accordingly decide the data type. For example interger can store upto 1e9, long can store upto 1e12 and long long can store upto 1e18.
-   b.> Also note that most questions should be solved within 1s of time, which happens only if your max intraion is of the order of 1e7.
-   c.> You should also not forget to clear the vector or map after each test case using mp.clear() or arr.clear()
-   d.> When you declare int sum; its initial value is indeterminate, meaning it could contain any random value. So initialize it to sum = 0 before proceeding to code logic.
-   e.> Store value of boolean expression in bool data type and not in int data type(Example - https://www.codechef.com/START136D/problems/FIRSTGEO)
-   f.>We should use int a = s[i] - 'a' to convert the character to an index from 0 to 25 where s[i] is indexing of some string.
-   g.>vector<int> arr(n, 0) initializes a vector named arr with n elements, all set to 0
-   h.> ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-    It ensures faster input and output operations, which is crucial for handling large input sizes efficiently.
-   i.> vector<vector<int>> grid(n, vector<int>(m)); //for 2d array
+
+         a.> Do not forget to observe the range of input values. Accordingly decide the data type. For example interger can store upto 1e9, long can store upto 1e12 and long long can store upto 
+          1e18.
+         b.> Also note that most questions should be solved within 1s of time, which happens only if your max intraion is of the order of 1e7.
+         c.> You should also not forget to clear the vector or map after each test case using mp.clear() or arr.clear()
+         d.> When you declare int sum; its initial value is indeterminate, meaning it could contain any random value. So initialize it to sum = 0 before proceeding to code logic.
+         e.> Store value of boolean expression in bool data type and not in int data type(Example - https://www.codechef.com/START136D/problems/FIRSTGEO)
+         f.>We should use int a = s[i] - 'a' to convert the character to an index from 0 to 25 where s[i] is indexing of some string.
+         g.>vector<int> arr(n, 0) initializes a vector named arr with n elements, all set to 0
+         h.> ios_base::sync_with_stdio(false);
+          cin.tie(nullptr);
+          cout.tie(nullptr);
+          It ensures faster input and output operations, which is crucial for handling large input sizes efficiently.
+         i.> vector<vector<int>> grid(n, vector<int>(m)); //for 2d array
 
 ---
 
@@ -46,6 +48,7 @@ in vector saves much time if compared to brute worst case. By precomputation you
 Example - https://codeforces.com/problemset/problem/1766/A
 
 BRUTE FORCE:-
+    
     ```cpp
     
       while(t--){
