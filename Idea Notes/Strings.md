@@ -63,7 +63,7 @@ Now, the frequency of substring 'ab' is 3, and the frequency of substring 'ba' i
               }
 https://codeforces.com/problemset/problem/1606/A
 ---
-5. ## Pallindrome String
+5. ## Palindrome String
 
 A string s can be rearranged to form a palindrome if and only if "the number of letters with odd occurrences is not greater than 1".
 
