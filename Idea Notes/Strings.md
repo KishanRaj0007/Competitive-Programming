@@ -61,7 +61,6 @@ Now, the frequency of substring 'ab' is 3, and the frequency of substring 'ba' i
                       cout << s << endl;
                   }
               }
----
 https://codeforces.com/problemset/problem/1606/A
 ---
 5. ## Pallindrome String
