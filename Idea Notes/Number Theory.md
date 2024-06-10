@@ -30,8 +30,7 @@
        ans = __gcd(ans, abs(x-i));
    }
 
-
-    https://codeforces.com/problemset/problem/1828/B
+https://codeforces.com/problemset/problem/1828/B
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 4. Suppose you got a question in which manupulation of division and multiplication is required- in that case try analyzing its prime factors.
    https://codeforces.com/problemset/problem/1374/B
@@ -51,8 +50,8 @@
    -For unsigned 32-bit integers, use uint32_t.  (In C++, the unsigned keyword is used to declare an integer type that can only represent non-negative values.)
    -For unsigned 64-bit integers, use uint64_t.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## PRIME FACTORIZATION :- 
-'''markdown
+## 8. PRIME FACTORIZATION :- 
+```cpp
    #include<bits/stdc++.h>
     using namespace std;
 
@@ -85,19 +84,20 @@ int main() {
 
 9. For finding divisors iterate from 1 to root n for each number i in this range. Check if i is divisor of n, if i is divisor then n/i is also a divisor. Collect both i and n/i as 
    divisor. Handle the edge case when both i and n/i is same to avoid duplicates(it can be done using sets).
-'''markdown
-  Shortcut to check if a number has odd divisor:-
-  // Function to check if n has an odd divisor greater than 1
-bool hasOddDivisorGreaterThanOne(long long n) {
-    // Keep dividing n by 2 while it is even
-    while (n % 2 == 0) {
-        n /= 2;
-    }
-    // After all divisions by 2, if n becomes 1, it had no odd divisors
-    // If n is greater than 1, it means there was an odd divisor
-    return n > 1;
-}
-    https://codeforces.com/problemset/problem/1475/A
+   ```cpp
+     Shortcut to check if a number has odd divisor:-
+     // Function to check if n has an odd divisor greater than 1
+      bool hasOddDivisorGreaterThanOne(long long n) {
+       // Keep dividing n by 2 while it is even
+       while (n % 2 == 0) {
+           n /= 2;
+       }
+       // After all divisions by 2, if n becomes 1, it had no odd divisors
+       // If n is greater than 1, it means there was an odd divisor
+       return n > 1;
+   }
+
+https://codeforces.com/problemset/problem/1475/A
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 10. -[(a+b)/x] <= [a/x]+[b/x]
     -[] - ceil function
@@ -105,13 +105,11 @@ bool hasOddDivisorGreaterThanOne(long long n) {
 
     https://codeforces.com/problemset/problem/1471/A
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## Minimum LCM
-    -If b%a==0, then LCM(a,b)=b < n where n = a+b.
-    -If b % a≠0, then LCM(a,b) is at least 2b, and b is at least n/2, so in this case, the answer is at least n where n = a+b
-
-    -If a and b are numbers such that a+b = n then minimum lcm of a and b is possible if a is first factor of n and b=n-a.
-    (https://codeforces.com/problemset/problem/1765/M)
+    ## Minimum LCM
+   -If b%a==0, then LCM(a,b)=b < n where n = a+b.
+   -If b % a≠0, then LCM(a,b) is at least 2b, and b is at least n/2, so in this case, the answer is at least n where n = a+b
+   -If a and b are numbers such that a+b = n then minimum lcm of a and b is possible if a is first factor of n and b=n-a.
+       (https://codeforces.com/problemset/problem/1765/M)   
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 12. -k*b <= (∑⌊a/k⌋ = b) <= k*b + (k-1)*n. where [] means rounding off and summation a/k = [a1/k]+[a2/k]+....[an/k] = b
     https://codeforces.com/problemset/problem/1715/B
