@@ -92,7 +92,9 @@ https://codeforces.com/problemset/problem/1765/M
       Else print Not Possible
    --------------------------------------------------------------------------------------
 13. ## Prime Factorization
-    fjghgh
+    ```cpp
+    cout << "Hello world << endl;
+-----------------------------------------------------------
 
 
 
