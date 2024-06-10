@@ -91,41 +91,8 @@ https://codeforces.com/problemset/problem/1765/M
       If yes then print Possible
       Else print Not Possible
    --------------------------------------------------------------------------------------
- 
-## Prime Factorization
-gjv
-   ```cpp
-   #include<bits/stdc++.h>
-   using namespace std;
-   
-   const int N = 0;
-   
-   void findPrimeFactors(long long n){
-       vector<long long> x;
-       //the smallest divisor of a number is always prime except 1
-       for (long long i = 2; i * i <= n; ++i) {
-           while(n % i == 0){
-               x.push_back(i);
-               n = n / i;
-           }
-       }
-       // if n > 1 it means n has only even factors
-       if(n > 1) x.push_back(n);
-       for(auto a : x){
-           cout << a << " ";
-       }
-   }
-   
-   int main() {
-       long long n;
-       cin >> n;
-       findPrimeFactors(n);
-   }
-
---------------
-jjkk
-
-
+13. ## Prime Factorization
+    fjghgh
 
 
 
