@@ -213,6 +213,27 @@ https://codeforces.com/problemset/problem/1765/M
     Common Divisor) with n is 1.
     The idea is based on Euler’s product formula:-
     ![image](https://github.com/KishanRaj0007/Competitive-Programming/assets/142702439/1c7b8b84-b31c-4bef-b8f6-3e96d3afcc64)
+    ```cpp
+    int phi(int n)
+    {
+    
+    float result = n; 
+    for(int p = 2; p * p <= n; ++p)
+    {
+        
+        if (n % p == 0)
+        {
+            while (n % p == 0){
+                n /= p;
+            }
+            result *= (1.0 - (1.0 / (float)p));
+        }
+    }
+    if (n > 1) result -= result / n;      
+    return (int)result;
+    }
+---
+
 
 
 
