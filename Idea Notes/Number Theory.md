@@ -50,36 +50,36 @@ https://codeforces.com/problemset/problem/1828/B
    -For unsigned 32-bit integers, use uint32_t.  (In C++, the unsigned keyword is used to declare an integer type that can only represent non-negative values.)
    -For unsigned 64-bit integers, use uint64_t.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 8. PRIME FACTORIZATION :- 
-```cpp
-   #include<bits/stdc++.h>
-    using namespace std;
+## PRIME FACTORIZATION :- 
+     ```cpp
+     #include<bits/stdc++.h>
+      using namespace std;
 
-const int N = 0;
+      const int N = 0;
 
-void findPrimeFactors(long long n){
-    vector<long long> x;
-    //the smallest divisor of a number is always prime except 1
-    for (long long i = 2; i*i <= n ; ++i)
-    {
-        while(n% i == 0){
-            x.push_back(i);
-            n = n/i;
-        }
-    }
-    // if n == 1 it means n has only even factors
-    if(n > 1) x.push_back(n);
-    for(auto a : x){
-        cout << a << " ";
-    }
-}
+      void findPrimeFactors(long long n){
+       vector<long long> x;
+       //the smallest divisor of a number is always prime except 1
+       for (long long i = 2; i*i <= n ; ++i)
+       {
+         while(n% i == 0){
+               x.push_back(i);
+               n = n/i;
+           }
+       }
+       // if n == 1 it means n has only even factors
+       if(n > 1) x.push_back(n);
+       for(auto a : x){
+           cout << a << " ";
+       }
+   }
 
 
-int main() {
+  int main() {
     long long n;
     cin >> n;
     findPrimeFactors(n);
-}
+   }
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 9. For finding divisors iterate from 1 to root n for each number i in this range. Check if i is divisor of n, if i is divisor then n/i is also a divisor. Collect both i and n/i as 
@@ -96,7 +96,6 @@ int main() {
        // If n is greater than 1, it means there was an odd divisor
        return n > 1;
    }
-
 https://codeforces.com/problemset/problem/1475/A
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 10. -[(a+b)/x] <= [a/x]+[b/x]
