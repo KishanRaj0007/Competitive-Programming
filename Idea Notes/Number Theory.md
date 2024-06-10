@@ -74,10 +74,10 @@ https://codeforces.com/problemset/problem/1475/A
     https://codeforces.com/problemset/problem/1471/A
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 10.  ## Minimum LCM
-   If b%a==0, then LCM(a,b)=b < n where n = a+b.
-   If b % a≠0, then LCM(a,b) is at least 2b, and b is at least n/2, so in this case, the answer is at least n where n = a+b
-   If a and b are numbers such that a+b = n then minimum lcm of a and b is possible if a is first factor of n and b=n-a.
-       (https://codeforces.com/problemset/problem/1765/M)   
+         If b%a==0, then LCM(a,b)=b < n where n = a+b.
+         If b % a≠0, then LCM(a,b) is at least 2b, and b is at least n/2, so in this case, the answer is at least n where n = a+b
+         If a and b are numbers such that a+b = n then minimum lcm of a and b is possible if a is first factor of n and b=n-a.
+(https://codeforces.com/problemset/problem/1765/M)   
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 11. -k*b <= (∑⌊a/k⌋ = b) <= k*b + (k-1)*n. where [] means rounding off and summation a/k = [a1/k]+[a2/k]+....[an/k] = b
     https://codeforces.com/problemset/problem/1715/B
