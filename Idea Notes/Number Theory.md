@@ -209,6 +209,10 @@ https://codeforces.com/problemset/problem/1765/M
       }
 ---
 16. ## Euler's Totient Function
+    Euler’s Totient function Φ(n) for an input n is the count of numbers in {1, 2, 3, …, n-1} that are relatively prime to n, i.e., the numbers whose GCD (Greatest 
+    Common Divisor) with n is 1.
+    The idea is based on Euler’s product formula:-
+    ![image](https://github.com/KishanRaj0007/Competitive-Programming/assets/142702439/1c7b8b84-b31c-4bef-b8f6-3e96d3afcc64)
 
 
 
