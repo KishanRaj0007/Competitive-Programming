@@ -20,6 +20,7 @@
 EXAMPLE - https://codeforces.com/problemset/problem/1855/B
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 3. To claculate gcd of list of numbers stored in vector, we can find pair wise gcd. Result will be same.
+'''markdown
         int ans = 0;
         for (int i = 1; i <= n; ++i)
         {
@@ -43,13 +44,13 @@ EXAMPLE - https://codeforces.com/problemset/problem/1855/B
 
    https://codeforces.com/problemset/problem/1543/A
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-7. For 32-bit integers, use int or int32_t.
-   For 64-bit integers, use long long or int64_t.
-   For unsigned 32-bit integers, use uint32_t.  (In C++, the unsigned keyword is used to declare an integer type that can only represent non-negative values.)
-   For unsigned 64-bit integers, use uint64_t.
+7. -For 32-bit integers, use int or int32_t.
+   -For 64-bit integers, use long long or int64_t.
+   -For unsigned 32-bit integers, use uint32_t.  (In C++, the unsigned keyword is used to declare an integer type that can only represent non-negative values.)
+   -For unsigned 64-bit integers, use uint64_t.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## PRIME FACTORIZATION :- 
-
+'''markdown
    #include<bits/stdc++.h>
     using namespace std;
 
@@ -82,7 +83,7 @@ int main() {
 
 9. For finding divisors iterate from 1 to root n for each number i in this range. Check if i is divisor of n, if i is divisor then n/i is also a divisor. Collect both i and n/i as 
    divisor. Handle the edge case when both i and n/i is same to avoid duplicates(it can be done using sets).
-
+'''markdown
   Shortcut to check if a number has odd divisor:-
   // Function to check if n has an odd divisor greater than 1
 bool hasOddDivisorGreaterThanOne(long long n) {
@@ -96,31 +97,31 @@ bool hasOddDivisorGreaterThanOne(long long n) {
 }
     https://codeforces.com/problemset/problem/1475/A
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-10. [(a+b)/x] <= [a/x]+[b/x]
-    [] - ceil function
-    Do not forget to take x in float data type otherwise c++ will automatically round it. 
+10. -[(a+b)/x] <= [a/x]+[b/x]
+    -[] - ceil function
+    -Do not forget to take x in float data type otherwise c++ will automatically round it. 
 
     https://codeforces.com/problemset/problem/1471/A
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Minimum LCM
-    If b%a==0, then LCM(a,b)=b < n where n = a+b.
-    If b % a≠0, then LCM(a,b) is at least 2b, and b is at least n/2, so in this case, the answer is at least n where n = a+b
+    -If b%a==0, then LCM(a,b)=b < n where n = a+b.
+    -If b % a≠0, then LCM(a,b) is at least 2b, and b is at least n/2, so in this case, the answer is at least n where n = a+b
 
-    If a and b are numbers such that a+b = n then minimum lcm of a and b is possible if a is first factor of n and b=n-a.
+    -If a and b are numbers such that a+b = n then minimum lcm of a and b is possible if a is first factor of n and b=n-a.
     (https://codeforces.com/problemset/problem/1765/M)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-12. k*b <= (∑⌊a/k⌋ = b) <= k*b + (k-1)*n. where [] means rounding off and summation a/k = [a1/k]+[a2/k]+....[an/k] = b
+12. -k*b <= (∑⌊a/k⌋ = b) <= k*b + (k-1)*n. where [] means rounding off and summation a/k = [a1/k]+[a2/k]+....[an/k] = b
     https://codeforces.com/problemset/problem/1715/B
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Linear Diophantine Equations
    Given three integers a, b, c representing a linear equation of the form : ax + by = c. Determine if the equation has a solution such that x and y are both integral values.
 
-   Find GCD of a and b
-   Check if c % GCD(a ,b) ==0
-   If yes then print Possible
-   Else print Not Possible
+   -Find GCD of a and b
+   -Check if c % GCD(a ,b) ==0
+   -If yes then print Possible
+   -Else print Not Possible
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
