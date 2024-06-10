@@ -8,18 +8,24 @@
 
    For questions related to parity (odd, even), try to come up with a solution by analyzing odd as 1 and even as 0. For example, in an array having even frequency of odd numbers, it is always possible to divide the array into two parts such that the sum of both parts will have the same parity.
 
+Odd even problems can sometimes be solved by using XOR operator. For example if we are asked to find the element which occurs odd times in an array of elements all having even count except one, in O(1) SPACE AND O(N) time.
+In that case just take XOR of all elements, final ans is required number which occurs odd times. 
+small example = a^b^a = a^a^b=0^b=b (all even ones will be computed to 0 and 0 XOR ans = ans)
+
+In this case Hashing will take O(N) SPACE AND O(1) time hence XOR method is optimal.
+
    **Example**: [Codeforces Problem 1857/A](https://codeforces.com/problemset/problem/1857/A)
 
    In the case of a binary string, if you replace `0` with `-1` and `1` with `1`, then the substring which makes the sum `0` is having the same number of `0` and `1`.
 
-2. **Interval of Positive Integers**:
+3. **Interval of Positive Integers**:
    To find the length of the largest interval `[l, r]` (which is `r - l + 1`) of positive integers (consecutive) such that, for every `i` in the interval (i.e., `l ≤ i ≤ r`), `n` is a multiple of `i` or `i` is a factor of `n`, we will simplify the problem by focusing on intervals starting from 1. If you find the smallest integer `x` that does not divide `n`, then the length of the interval `[1, x-1]` which is `((x-1) - 1 + 1) = x-1` is the required length.
 
    In other words, among a list of factors of a number, chances of getting the maximum length of consecutive factors that divide a number is good if we start from the beginning. This is because as we move ahead, the difference between factors increases. For example, factors of 40 are 1, 2, 4, 5, 8, 10, 20, 40. See that the sense of consecutiveness decreases as we move far away since the difference between factors increases as we move from left to right. So, the maximum length of consecutive factors will surely appear at the beginning.
 
    **Example**: [Codeforces Problem 1855/B](https://codeforces.com/problemset/problem/1855/B)
 
-3. **Calculate GCD**:
+4. **Calculate GCD**:
    To calculate the GCD of a list of numbers stored in a vector, we can find pairwise GCD. The result will be the same.
 
    ```cpp
