@@ -40,29 +40,29 @@ s' = "abababa"
 Now, the frequency of substring 'ab' is 3, and the frequency of substring 'ba' is also 3. So, the statement holds true for this example after the suggested modification.
 
     ```cpp
-      #include "bits/stdc++.h"
-       using namespace std;
-       int main()
-       {
-           int t;
-           cin >> t;
-           while(t--){
-               string s;
-               cin >> s;
-               if(s[0] == s[s.length()-1]){
-                   cout << s << endl;
-                   continue;
-               }
-               if(s[0] == 'a'){
-                   s[0] = 'b';
-               }
-               else{
-                   s[0] = 'a';
-               }
-               cout << s << endl;
-           }
-       }
-
+             #include "bits/stdc++.h"
+              using namespace std;
+              int main()
+              {
+                  int t;
+                  cin >> t;
+                  while(t--){
+                      string s;
+                      cin >> s;
+                      if(s[0] == s[s.length()-1]){
+                          cout << s << endl;
+                          continue;
+                      }
+                      if(s[0] == 'a'){
+                          s[0] = 'b';
+                      }
+                      else{
+                          s[0] = 'a';
+                      }
+                      cout << s << endl;
+                  }
+              }
+---
 https://codeforces.com/problemset/problem/1606/A
 ---
 5.>## Pallindrome String
