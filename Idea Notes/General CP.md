@@ -1,5 +1,5 @@
 
-0. # SILLY MISTAKES
+0. ## SILLY MISTAKES
 
          a.> Do not forget to observe the range of input values. Accordingly decide the data type. For example interger can store upto 1e9, long can store upto 1e12 and long long can store upto 
           1e18.
