@@ -13,7 +13,7 @@
     It ensures faster input and output operations, which is crucial for handling large input sizes efficiently.
    i.> vector<vector<int>> grid(n, vector<int>(m)); //for 2d array
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 1. We can use inbuilt map data structure to store frequency of each element of an array or vector while taking the input from user:-
 
@@ -32,12 +32,12 @@ int maxFreq = 0;
         for (auto &[x, y] : freq) {
             maxFreq = max(maxFreq, y);
         }
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 2. Sometimes in questions of Yes or No, you do not have to look for every edge case, instead look to more vulnerable one and rest all cases will fall in other one.
   
 Example - https://codeforces.com/problemset/problem/1878/A
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 3. If you are getting TLE and you think that algo is good, then try applying precomputation technique. It will work sometimes because precomputing at constraind length and storing your answers 
 in vector saves much time if compared to brute worst case. By precomputation you are now just required to print you answer only in constant or linear time.
@@ -67,7 +67,7 @@ while(t--){
     cout << answer <<endl;
 }
 The total time complexity is O(t NlogN) where t is 1e4 and N is 999999 which leads to TLE because 1e7 iterations take about 1second and here is 1e10 iterations
-----------------------------------
+---
 OPTIMIZED: PRECOMPUTATION
 
 #include<bits/stdc++.h>
@@ -112,7 +112,7 @@ int main() {
 For each test case, we count how many precomputed numbers are ≤𝑛. This is 𝑂(𝑚), where 𝑚 is the number of precomputed extremely round numbers (a constant, at most 54 for the given range).
 Thus, the time complexity per test case is 𝑂(𝑚), and for 𝑡 test cases, the total time complexity is 𝑂(𝑡⋅𝑚). Since 𝑚 is a small constant, this simplifies to 𝑂(𝑡).
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 4. TRACKING MAXIMUM SUBARRAY LENGTH SATISFYING SOME CONDITION.
    int ans = 1;
    int count = 1;
@@ -125,7 +125,7 @@ Thus, the time complexity per test case is 𝑂(𝑚), and for 𝑡 test cases, 
 https://codeforces.com/problemset/problem/1850/D
 https://codeforces.com/problemset/problem/1837/B
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 5.> To find the length of the longest consecutive sequence of identical elements in an array we will find an array f whose a[i] will give the frequency count of element i, algo is:-
 
      input - a: 1 2 2 2 2
@@ -143,7 +143,7 @@ https://codeforces.com/problemset/problem/1837/B
         }
     }
     fa[a[n]] = max(fa[a[n]], n - p + 1);
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 
 
