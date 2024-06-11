@@ -239,6 +239,14 @@ https://codeforces.com/problemset/problem/1765/M
     if (n > 1) result -= result / n;      
     return (int)result;
     }
+**Properties of ETF**
+0. **Euler Theorem** : (a^b) % M = a ^ (b%⋅ϕ(M)) % M
+1. If p is prime then ϕ(p)=p–1
+2. For two prime numbers a and b ϕ(a⋅b)=ϕ(a)⋅ϕ(b)=(a–1)⋅(b–1)
+3. For a prime number p, ϕ(p ^ k )=p ^k –p ^ k–1
+4. For any two number a and b ϕ(a⋅b) = ϕ(a)⋅ϕ(b) ⋅ 𝑔𝑐𝑑(𝑎,𝑏)/𝜙(𝑔𝑐𝑑(𝑎,𝑏))
+5. Sum of values of totient functions of all divisors of n is equal to n. 
+​
 ---
 
 
