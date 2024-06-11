@@ -240,6 +240,7 @@ https://codeforces.com/problemset/problem/1765/M
     return (int)result;
     }
 **Properties of ETF**
+
 0. **Euler Theorem** : (a^b) % M = a ^ (b%⋅ϕ(M)) % M
 1. If p is prime then ϕ(p)=p–1
 2. For two prime numbers a and b ϕ(a⋅b)=ϕ(a)⋅ϕ(b)=(a–1)⋅(b–1)
