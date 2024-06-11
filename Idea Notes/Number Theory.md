@@ -130,7 +130,7 @@ https://codeforces.com/problemset/problem/1765/M
     Fermat’s little theorem states that if p is a prime number, then for any integer a, the number a p – a is an integer multiple of p.
 ---
 15. ## Segmented Sieve
-    Given a number n, print all primes smaller than between L and h.
+    Given a number n, print all primes between L and h.
         1. Generate all prime numbers from 2 to floor(root h) in a vector using normal sieve.
         2. Create a bool array of size h-l+1(in which first index represents l and so on..) and initialize all as true.
         3. Mark multiples of prime obtained in 1 as false. Remaining true are primes.
