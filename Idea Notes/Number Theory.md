@@ -127,7 +127,7 @@ https://codeforces.com/problemset/problem/1765/M
       }
 -----------------------------------------------------------
 14. ## Fermat’s little theorem
-    Fermat’s little theorem states that if p is a prime number, then for any integer a, the number a p – a is an integer multiple of p.
+    Fermat’s little theorem states that if p is a prime number, then for any integer a, the number a^p – a is an integer multiple of p.
     This theorem is used in Modular Multiplicative Inverse
 ---
 15. ## Segmented Sieve
