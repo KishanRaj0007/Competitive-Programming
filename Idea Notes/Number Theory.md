@@ -89,7 +89,7 @@ https://codeforces.com/problemset/problem/1765/M
     https://codeforces.com/problemset/problem/1715/B
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-12. ## Linear Diophantine Equations
+12. ## Linear Diophantine Equations For existence of solution of ax+by=c
    Given three integers a, b, c representing a linear equation of the form : ax + by = c. Determine if the equation has a solution such that x and y are both integral values.
 
       Find GCD of a and b
