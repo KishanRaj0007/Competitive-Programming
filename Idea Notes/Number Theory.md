@@ -217,7 +217,7 @@ https://codeforces.com/problemset/problem/1765/M
       	segmentedSieve(low, high);
       }
 ---
-16. ## Euler's Totient Function(Application in (a^b) % M = (a ^(b mod phi(M))) % M)
+16. ## Euler's Totient Function(Application in (a^b) % M = (a ^(b mod phi(M))) % M
     Euler’s Totient function Φ(n) for an input n is the count of numbers in {1, 2, 3, …, n-1} that are relatively prime to n, i.e., the numbers whose GCD (Greatest 
     Common Divisor) with n is 1.
     The idea is based on Euler’s product formula:-
