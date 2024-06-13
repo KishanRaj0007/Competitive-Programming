@@ -97,6 +97,69 @@ https://codeforces.com/problemset/problem/1765/M
       If yes then print Possible
       Else print Not Possible
    --------------------------------------------------------------------------------------
+
+14. ## Fermat’s little theorem (application- (a/b) % M = (a % M)*(b inverse % M)) % M and b inverse = (b ^(M-2)) % M
+    Here b ^(M-2) is solved by binary exponentiation in log N time.
+    
+    Fermat’s little theorem states that if p is a prime number, then for any integer a, the number a^p – a is an integer multiple of p.
+    This theorem is used in Modular Multiplicative Inverse( a ^(m-1) ≡ 1 mod m) - if we divide lhs with m remainder is 1)
+---
+16. ## Euler's Totient Function(Application in (a^b) % M = (a ^(b mod phi(M))) % M
+    Euler’s Totient function Φ(n) for an input n is the count of numbers in {1, 2, 3, …, n-1} that are relatively prime to n, i.e., the numbers whose GCD (Greatest 
+    Common Divisor) with n is 1.
+    The idea is based on Euler’s product formula:-
+    In this formula p is distinct prime factors.
+    ![image](https://github.com/KishanRaj0007/Competitive-Programming/assets/142702439/1c7b8b84-b31c-4bef-b8f6-3e96d3afcc64)
+    ```cpp
+    int phi(int n)
+    {
+    
+    float result = n; 
+    for(int p = 2; p * p <= n; ++p)
+    {
+        
+        if (n % p == 0)
+        {
+            while (n % p == 0){
+                n /= p;
+            }
+            result *= (1.0 - (1.0 / (float)p));
+        }
+    }
+    if (n > 1) result -= result / n;      
+    return (int)result;
+    }
+**Properties of ETF**
+
+0. **Euler Theorem** : (a^b) % M = a ^ (b%⋅ϕ(M)) % M (It is used if b is very very large as in a^b^c)
+1. If p is prime then ϕ(p)=p–1
+2. For two prime numbers a and b ϕ(a⋅b)=ϕ(a)⋅ϕ(b)=(a–1)⋅(b–1)
+3. For a prime number p, ϕ(p ^ k )=p ^k –p ^ k–1
+4. For any two number a and b ϕ(a⋅b) = ϕ(a)⋅ϕ(b) ⋅ 𝑔𝑐𝑑(𝑎,𝑏)/𝜙(𝑔𝑐𝑑(𝑎,𝑏))
+5. Sum of values of totient functions of all divisors of n is equal to n. 
+​
+---
+17. ## Binary Exponentiation O(log B)
+    ```cpp
+       const int M = 1e9+7;
+      //if a = 2 and b = 63 then overflow for ll will occur hence Modulo is must in 
+      //this type of problem
+      ll binExp(ll a, ll b){
+          ll result = 1;
+          while(b){
+              if(b & 1){
+                  result = result * 1LL* a % M;  //separat it when odd comes
+              }
+              a = a*1ll*a % M;
+              b >>= 1;
+          }
+          return result;
+      }
+Applications:-
+1. a raised to the power b and b is very very large(1e9).
+2. product of two very large numbers(just replace * with + and result = 0.
+3. applying permutaion P to S.
+---
 13. ## Prime Factorization
     ```cpp
     #include<bits/stdc++.h>
@@ -126,12 +189,6 @@ https://codeforces.com/problemset/problem/1765/M
           findPrimeFactors(n);
       }
 -----------------------------------------------------------
-14. ## Fermat’s little theorem (application- (a/b) % M = (a % M)*(b inverse % M)) % M and b inverse = (b ^(M-2)) % M
-    Here b ^(M-2) is solved by binary exponentiation in log N time.
-    
-    Fermat’s little theorem states that if p is a prime number, then for any integer a, the number a^p – a is an integer multiple of p.
-    This theorem is used in Modular Multiplicative Inverse( a ^(m-1) ≡ 1 mod m) - if we divide lhs with m remainder is 1)
----
 15. ## Segmented Sieve
     Given a number n, print all primes between L and h.
         1. Generate all prime numbers from 2 to floor(root h) in a vector using normal sieve.
@@ -217,62 +274,7 @@ https://codeforces.com/problemset/problem/1765/M
       	segmentedSieve(low, high);
       }
 ---
-16. ## Euler's Totient Function(Application in (a^b) % M = (a ^(b mod phi(M))) % M
-    Euler’s Totient function Φ(n) for an input n is the count of numbers in {1, 2, 3, …, n-1} that are relatively prime to n, i.e., the numbers whose GCD (Greatest 
-    Common Divisor) with n is 1.
-    The idea is based on Euler’s product formula:-
-    In this formula p is distinct prime factors.
-    ![image](https://github.com/KishanRaj0007/Competitive-Programming/assets/142702439/1c7b8b84-b31c-4bef-b8f6-3e96d3afcc64)
-    ```cpp
-    int phi(int n)
-    {
-    
-    float result = n; 
-    for(int p = 2; p * p <= n; ++p)
-    {
-        
-        if (n % p == 0)
-        {
-            while (n % p == 0){
-                n /= p;
-            }
-            result *= (1.0 - (1.0 / (float)p));
-        }
-    }
-    if (n > 1) result -= result / n;      
-    return (int)result;
-    }
-**Properties of ETF**
 
-0. **Euler Theorem** : (a^b) % M = a ^ (b%⋅ϕ(M)) % M (It is used if b is very very large as in a^b^c)
-1. If p is prime then ϕ(p)=p–1
-2. For two prime numbers a and b ϕ(a⋅b)=ϕ(a)⋅ϕ(b)=(a–1)⋅(b–1)
-3. For a prime number p, ϕ(p ^ k )=p ^k –p ^ k–1
-4. For any two number a and b ϕ(a⋅b) = ϕ(a)⋅ϕ(b) ⋅ 𝑔𝑐𝑑(𝑎,𝑏)/𝜙(𝑔𝑐𝑑(𝑎,𝑏))
-5. Sum of values of totient functions of all divisors of n is equal to n. 
-​
----
-17. ## Binary Exponentiation O(log B)
-    ```cpp
-       const int M = 1e9+7;
-      //if a = 2 and b = 63 then overflow for ll will occur hence Modulo is must in 
-      //this type of problem
-      ll binExp(ll a, ll b){
-          ll result = 1;
-          while(b){
-              if(b & 1){
-                  result = result * 1LL* a % M;  //separat it when odd comes
-              }
-              a = a*1ll*a % M;
-              b >>= 1;
-          }
-          return result;
-      }
-Applications:-
-1. a raised to the power b and b is very very large(1e9).
-2. product of two very large numbers(just replace * with + and result = 0.
-3. applying permutaion P to S.
----
 
 
 
