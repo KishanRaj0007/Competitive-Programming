@@ -250,7 +250,7 @@ https://codeforces.com/problemset/problem/1765/M
 5. Sum of values of totient functions of all divisors of n is equal to n. 
 ​
 ---
-17. ## Binary Exponentiation
+17. ## Binary Exponentiation O(log B)
     ```cpp
        const int M = 1e9+7;
       //if a = 2 and b = 63 then overflow for ll will occur hence Modulo is must in 
