@@ -250,6 +250,23 @@ https://codeforces.com/problemset/problem/1765/M
 5. Sum of values of totient functions of all divisors of n is equal to n. 
 ​
 ---
+17. ## Binary Exponentiation
+    ```cpp
+       const int M = 1e9+7;
+      //if a = 2 and b = 63 then overflow for ll will occur hence Modulo is must in 
+      //this type of problem
+      ll binExp(ll a, ll b){
+          ll result = 1;
+          while(b){
+              if(b & 1){
+                  result = result * 1LL* a % M;  //separat it when odd comes
+              }
+              a = a*1ll*a % M;
+              b >>= 1;
+          }
+          return result;
+      }
+---
 
 
 
