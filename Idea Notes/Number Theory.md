@@ -266,6 +266,10 @@ https://codeforces.com/problemset/problem/1765/M
           }
           return result;
       }
+Applications:-
+1. a raised to the power b and b is very very large.
+2. product of two very large numbers.
+3. applying permutaion P to S.
 ---
 
 
