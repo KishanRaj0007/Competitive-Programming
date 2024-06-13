@@ -126,7 +126,9 @@ https://codeforces.com/problemset/problem/1765/M
           findPrimeFactors(n);
       }
 -----------------------------------------------------------
-14. ## Fermat’s little theorem
+14. ## Fermat’s little theorem (application- (a/b) % M = ((a % M)*(b inverse % M)) % M) and b inverse = (b ^(M-2)) % M
+    Here b ^(M-2) is solved by binary exponentiation in log N time.
+    
     Fermat’s little theorem states that if p is a prime number, then for any integer a, the number a^p – a is an integer multiple of p.
     This theorem is used in Modular Multiplicative Inverse( a ^(m-1) ≡ 1 mod m) - if we divide lhs with m remainder is 1)
 ---
@@ -215,7 +217,7 @@ https://codeforces.com/problemset/problem/1765/M
       	segmentedSieve(low, high);
       }
 ---
-16. ## Euler's Totient Function
+16. ## Euler's Totient Function(Application in (a^b) % M = (a ^(b mod phi(M))) % M)
     Euler’s Totient function Φ(n) for an input n is the count of numbers in {1, 2, 3, …, n-1} that are relatively prime to n, i.e., the numbers whose GCD (Greatest 
     Common Divisor) with n is 1.
     The idea is based on Euler’s product formula:-
@@ -267,8 +269,8 @@ https://codeforces.com/problemset/problem/1765/M
           return result;
       }
 Applications:-
-1. a raised to the power b and b is very very large.
-2. product of two very large numbers.
+1. a raised to the power b and b is very very large(1e9).
+2. product of two very large numbers(just replace * with + and result = 0.
 3. applying permutaion P to S.
 ---
 
