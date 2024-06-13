@@ -126,7 +126,7 @@ https://codeforces.com/problemset/problem/1765/M
           findPrimeFactors(n);
       }
 -----------------------------------------------------------
-14. ## Fermat’s little theorem (application- (a/b) % M = ((a % M)*(b inverse % M)) % M) and b inverse = (b ^(M-2)) % M
+14. ## Fermat’s little theorem (application- (a/b) % M = (a % M)*(b inverse % M)) % M and b inverse = (b ^(M-2)) % M
     Here b ^(M-2) is solved by binary exponentiation in log N time.
     
     Fermat’s little theorem states that if p is a prime number, then for any integer a, the number a^p – a is an integer multiple of p.
