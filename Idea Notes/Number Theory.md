@@ -33,7 +33,7 @@ In this case Hashing will take O(N) SPACE AND O(1) time hence XOR method is opti
    for (int i = 1; i <= n; ++i) {
        int x;
        cin >> x;
-       ans = __gcd(ans, abs(x-i));
+       ans = __gcd(ans, x);
    }
 
 https://codeforces.com/problemset/problem/1828/B
