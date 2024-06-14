@@ -265,8 +265,8 @@ Applications:-
 Note that gcd of 3, 4 and 5 is one and chinese remainder theorem is valid only if they are coprime.
 Chinese Remainder Theorem states that there always exists an x that satisfies given congruences:- 
 
- x ≡ y (mod productOfNumbers) i.e., All those x when divided by product will always give same remainder.
- But we use following formula to find x:-
+ x ≡ y (mod productOfNumbers) i.e., All those x when divided by product(3*4*5) will always give same remainder.
+ But we use following formula to find value of x:-
  
  x =  ( Σ(rem[i]*pp[i]*inv[i]) ) % prod
    Where 0 <= i <= n-1
