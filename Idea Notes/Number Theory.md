@@ -115,7 +115,7 @@ https://codeforces.com/problemset/problem/1765/M
          x0 = x1 - q * x0; 
          x1 = t; 
      } 
-     // Make x1 positive 
+     // Make x1 positive.
      if (x1 < 0) x1 += m0;
      return x1;
    }
