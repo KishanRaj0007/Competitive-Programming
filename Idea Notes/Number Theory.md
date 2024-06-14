@@ -38,25 +38,25 @@ In this case Hashing will take O(N) SPACE AND O(1) time hence XOR method is opti
 
 https://codeforces.com/problemset/problem/1828/B
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-4. Suppose you got a question in which manupulation of division and multiplication is required- in that case try analyzing its prime factors.
+5. Suppose you got a question in which manupulation of division and multiplication is required- in that case try analyzing its prime factors.
    https://codeforces.com/problemset/problem/1374/B
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-5. Whenever you encounter a problem that involves maximizing distances within a rectangular grid, especially with constraints on movement to adjacent cells:the optimal strategy involves placing 
+6. Whenever you encounter a problem that involves maximizing distances within a rectangular grid, especially with constraints on movement to adjacent cells:the optimal strategy involves placing 
    these points in opposite corners of the grid. This is because the longest possible distance in a rectangular grid is achieved by traversing the perimeter of the grid from one corner to the
    opposite corner.  (the distance always being 2⋅(n−1)+2⋅(m−1)).
 
    https://codeforces.com/problemset/problem/1537/B   -   (In this question output of test cases are incorrectly given)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-6. For two numbers a and b, if you want to maximize the gcd of a and b by simultaneously increasing OR decreasing(either one of them) a and b by 1, then maximum gcd possible is abs(a-b)
+7. For two numbers a and b, if you want to maximize the gcd of a and b by simultaneously increasing OR decreasing(either one of them) a and b by 1, then maximum gcd possible is abs(a-b)
 
    https://codeforces.com/problemset/problem/1543/A
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-7. -For 32-bit integers, use int or int32_t.
+8. -For 32-bit integers, use int or int32_t.
    -For 64-bit integers, use long long or int64_t.
    -For unsigned 32-bit integers, use uint32_t.  (In C++, the unsigned keyword is used to declare an integer type that can only represent non-negative values.)
    -For unsigned 64-bit integers, use uint64_t.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-8. For finding divisors iterate from 1 to root n for each number i in this range. Check if i is divisor of n, if i is divisor then n/i is also a divisor. Collect both i and n/i as 
+9. For finding divisors iterate from 1 to root n for each number i in this range. Check if i is divisor of n, if i is divisor then n/i is also a divisor. Collect both i and n/i as 
    divisor. Handle the edge case when both i and n/i is same to avoid duplicates(it can be done using sets).
    ```cpp
      Shortcut to check if a number has odd divisor:-
@@ -73,23 +73,23 @@ https://codeforces.com/problemset/problem/1828/B
 
 https://codeforces.com/problemset/problem/1475/A
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-9. -[(a+b)/x] <= [a/x]+[b/x]
+10. -[(a+b)/x] <= [a/x]+[b/x]
     -[] - ceil function
     -Do not forget to take x in float data type otherwise c++ will automatically round it. 
 
     https://codeforces.com/problemset/problem/1471/A
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-10.  ## Minimum LCM
+11.  ## Minimum LCM
          If b%a==0, then LCM(a,b)=b < n where n = a+b.
          If b % a≠0, then LCM(a,b) is at least 2b, and b is at least n/2, so in this case, the answer is at least n where n = a+b
          If a and b are numbers such that a+b = n then minimum lcm of a and b is possible if a is first factor of n and b=n-a.
 https://codeforces.com/problemset/problem/1765/M   
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-11. -k*b <= (∑⌊a/k⌋ = b) <= k*b + (k-1)*n. where [] means rounding off and summation a/k = [a1/k]+[a2/k]+....[an/k] = b
+12. -k*b <= (∑⌊a/k⌋ = b) <= k*b + (k-1)*n. where [] means rounding off and summation a/k = [a1/k]+[a2/k]+....[an/k] = b
     https://codeforces.com/problemset/problem/1715/B
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-12. ## Linear Diophantine Equations For existence of solution of ax+by=c
+13. ## Linear Diophantine Equations For existence of solution of ax+by=c
    Given three integers a, b, c representing a linear equation of the form : ax + by = c. Determine if the equation has a solution such that x and y are both integral values.
 
       Find GCD of a and b
@@ -104,7 +104,7 @@ https://codeforces.com/problemset/problem/1765/M
     Fermat’s little theorem states that if p is a prime number, then for any integer a, the number a^p – a is an integer multiple of p.
     This theorem is used in Modular Multiplicative Inverse( a ^(m-1) ≡ 1 mod m) - if we divide lhs with m remainder is 1)
 ---
-16. ## Euler's Totient Function(Application in (a^b) % M = (a ^(b mod phi(M))) % M
+15. ## Euler's Totient Function(Application in (a^b) % M = (a ^(b mod phi(M))) % M
     Euler’s Totient function Φ(n) for an input n is the count of numbers in {1, 2, 3, …, n-1} that are relatively prime to n, i.e., the numbers whose GCD (Greatest 
     Common Divisor) with n is 1.
     The idea is based on Euler’s product formula:-
@@ -139,7 +139,7 @@ https://codeforces.com/problemset/problem/1765/M
 5. Sum of values of totient functions of all divisors of n is equal to n. 
 ​
 ---
-17. ## Binary Exponentiation O(log B)
+16. ## Binary Exponentiation O(log B)
     ```cpp
        const int M = 1e9+7;
       //if a = 2 and b = 63 then overflow for ll will occur hence Modulo is must in 
@@ -160,13 +160,8 @@ Applications:-
 2. product of two very large numbers(just replace * with + and result = 0.
 3. applying permutaion P to S.
 ---
-13. ## Prime Factorization
-    ```cpp
-    #include<bits/stdc++.h>
-      using namespace std;
-      
-      const int N = 0;
-      
+17. ## Prime Factorization
+    ```cpp      
       void findPrimeFactors(long long n){
           vector<long long> x;
           //the smallest divisor of a number is always prime except 1
@@ -182,99 +177,37 @@ Applications:-
               cout << a << " ";
           }
       }
-      
-      int main() {
-          long long n;
-          cin >> n;
-          findPrimeFactors(n);
-      }
 -----------------------------------------------------------
-15. ## Segmented Sieve
-    Given a number n, print all primes between L and h.
-        1. Generate all prime numbers from 2 to floor(root h) in a vector using normal sieve.
-        2. Create a bool array of size h-l+1(in which first index represents l and so on..) and initialize all as true.
-        3. Mark multiples of prime obtained in 1 as false. Remaining true are primes.
+18. Sieve of Eratosthenes for primes in some range in Nlog(log N) time:-
     ```cpp
-    #include <bits/stdc++.h>
-      using namespace std;
-      // fillPrime function fills primes from 2 to sqrt of high in chprime(vector) array
-      void fillPrimes(vector<int>& prime, int high)
-      {
-      	bool ck[high + 1];
-      	memset(ck, true, sizeof(ck));
-      	ck[1] = false;
-      	ck[0] = false;
-      	for (int i = 2; (i * i) <= high; i++) {
-      		if (ck[i] == true) {
-      			for (int j = i * i; j <= sqrt(high); j = j + i) {
-      				ck[j] = false;
-      			}
-      		}
-      	}
-      	for (int i = 2; i * i <= high; i++) {
-      		if (ck[i] == true) {
-      			prime.push_back(i);
-      		}
-      	}
-      }
-      // in segmented sieve we check for prime from range [low, high]
-      void segmentedSieve(int low, int high)
-      {
-      	if (low<2 and high>=2){
-      		low = 2;
-      	}//for handling corner case when low = 1 and we all know 1 is not prime no. 
-      	bool prime[high - low + 1];
-      //here prime[0] indicates whether low is prime or not similarly prime[1] indicates whether low+1 is prime or not
-      	memset(prime, true, sizeof(prime));
-      
-      	vector<int> chprime;
-      	fillPrimes(chprime, high);
-      	//chprimes has primes in range [2,sqrt(n)]
-      	// we take primes from 2 to sqrt[n] because the multiples of all primes below high are marked by these 
-      // primes in range 2 to sqrt[n] for eg: for number 7 its multiples i.e 14 is marked by 2, 21 is marked by 3,
-      // 28 is marked by 4, 35 is marked by 5, 42 is marked 6, so 49 will be first marked by 7 so all number before 49 
-      // are marked by primes in range [2,sqrt(49)] 
-      	for (int i : chprime) {
-      		int lower = (low / i);
-      		//here lower means the first multiple of prime which is in range [low,high]
-      		//for eg: 3's first multiple in range [28,40] is 30		 
-      		if (lower <= 1) {
-      			lower = i + i;
-      		}
-      		else if (low % i) {
-      			lower = (lower * i) + i;
-      		}
-      		else {
-      			lower = (lower * i);
-      		}
-      		for (int j = lower; j <= high; j = j + i) {
-      			prime[j - low] = false;
-      		}
-      	}
-      
-      	for (int i = low; i <= high; i++) {
-      		if (prime[i - low] == true) {
-      			cout << (i) << " ";
-      		}
-      	}
-      }
-      int main()
-      {
-      	// low should be greater than or equal to 2
-      	int low = 2;
-      	// low here is the lower limit
-      	int high = 100;
-      	// high here is the upper limit
-      	// in segmented sieve we calculate primes in range [low,high] 
-      // here we initially we find primes in range [2,sqrt(high)] to mark all their multiples as not prime
-      //then we mark all their(primes) multiples in range [low,high] as false
-      // this is a modified sieve of eratosthenes , in standard sieve of eratosthenes we find prime from 1 to n(given number)
-      // in segmented sieve we only find primes in a given interval 
-      cout<<"Primes in range "<<low<<" to "<< high<<" are\n";
-      	segmentedSieve(low, high);
-      }
----
+    int main() {
+    int n = 1e7+7;
+    int l, r;
+    cin >> l >> r;
+    vector<bool> isprime(n,1);
+    isprime[0] = isprime[1] = 0;
+    for (int i = 2; i < n; ++i)
+    {
+        if(isprime[i]){
+            for (int j = i*2; j < n; j+=i)
+            {
+                isprime[j] = 0;
+            }
+        }        
+    }
+    
+    for (int i = l; i <= r; ++i)
+    {
+        if(isprime[i]){
+            cout << i << " ";
+        }
+    }
+}
 
+---------------------
+
+---
+19.
 
 
 
