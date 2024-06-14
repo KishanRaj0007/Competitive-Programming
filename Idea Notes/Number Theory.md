@@ -188,13 +188,13 @@ Applications:-
     int l, r;
     cin >> l >> r;
     vector<bool> isprime(n,1);
-    isprime[0] = isprime[1] = 0;
+    isprime[0] = isprime[1] = false;
     for (int i = 2; i < n; ++i)
     {
         if(isprime[i]){
             for (int j = i*2; j < n; j+=i)
             {
-                isprime[j] = 0;
+                isprime[j] = false;
             }
         }        
     }
