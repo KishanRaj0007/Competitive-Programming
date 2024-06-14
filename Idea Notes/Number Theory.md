@@ -210,7 +210,7 @@ Applications:-
 
 ---------------------
 19. ## Prime Factorization in log N using Sieve
-    ### (Effecient in case of queries - NLog(Log N) + t*Log N compared to t*rootN(Log N))
+    ### (Effecient in case of queries - NLog(Log N) + t*Log N is more effecient than t*rootN(Log N))
     ```cpp
     #include<bits/stdc++.h>
       using namespace std;
