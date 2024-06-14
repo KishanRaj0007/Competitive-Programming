@@ -88,7 +88,6 @@ https://codeforces.com/problemset/problem/1765/M
 12. -k*b <= (∑⌊a/k⌋ = b) <= k*b + (k-1)*n. where [] means rounding off and summation a/k = [a1/k]+[a2/k]+....[an/k] = b
     https://codeforces.com/problemset/problem/1715/B
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 13. ## Linear Diophantine Equations For existence of solution of ax+by=c
    Given three integers a, b, c representing a linear equation of the form : ax + by = c. Determine if the equation has a solution such that x and y are both integral values.
 
@@ -97,10 +96,10 @@ https://codeforces.com/problemset/problem/1765/M
       If yes then print Possible
       Else print Not Possible
    --------------------------------------------------------------------------------------
-14. ## Modular Multiplicative inverse for finding A inverse with respect to M
-    ### CASE 1: When A and M are coprime (Extended Euclid Algorithm)
+14. ## Modular Multiplicative inverse of A under M
+    ### CASE 1: When A and M are coprime ( ## Extended Euclid Algorithm)
     ```cpp
-    int findInverse(int a,int m){ //inv of a wrt m using Extended Euclid
+    int findInverse(int a,int m){ //MMI of a wrt m using Extended Euclid
      int m0 = m, t, q; 
      int x0 = 0, x1 = 1; 
    
@@ -111,26 +110,46 @@ https://codeforces.com/problemset/problem/1765/M
          t = m; 
          m = a % m;
          a = t; 
-         t = x0; 
+        t = x0; 
          x0 = x1 - q * x0; 
          x1 = t; 
      } 
      // Make x1 positive.
      if (x1 < 0) x1 += m0;
      return x1;
-   }
-   ### NOTE: Do not use Inverse formula derived by Fermat Little Theorem.
-   We cannot use A inverse = (A^(M-2)) % M to find inverse of A which is implemented by binary exponentiation because nums[i]
-   is not necessarily prime and This formula is used only if M is prime.
-   ---
+    }
+   ### CASE 2: When M is prime (## Application of Fermat Little Theorem and Binary exponentiation)
+   In this case A inverse = (A^(M-2)) % M and which can be done by binary exponentiation.
+    ```cpp
 
-14. ## Fermat’s little theorem (application- (a/b) % M = (a % M)*(b inverse % M)) % M and b inverse = (b ^(M-2)) % M
+        //finding MMI of a under b
+        //from Fermat Little theorem and binary exponentiation
+        //A inverse = (A^(M-2)) % M
+        ll findInverse(ll a, ll b){ 
+            ll result = 1;
+            ll exponent = b-2;
+            while(exponent){
+                if(exponent & 1){
+                    result = (result*1ll*a) % b;
+                }
+                a = (a*1ll*a) % b;
+                exponent >>= 1;
+            }
+            return result;
+        }
+      
+      int main() {
+            ll ans = findInverse(3,11);
+            cout << ans << endl;
+      }
+---
+15. ## Fermat little theorem (application- (a/b) % M = (a % M)*(b inverse % M)) % M and b inverse = (b ^(M-2)) % M
     Here b ^(M-2) is solved by binary exponentiation in log N time.
     
     Fermat’s little theorem states that if p is a prime number, then for any integer a, the number a^p – a is an integer multiple of p.
     This theorem is used in Modular Multiplicative Inverse( a ^(m-1) ≡ 1 mod m) - if we divide lhs with m remainder is 1)
 ---
-15. ## Euler's Totient Function(Application in (a^b) % M = (a ^(b mod phi(M))) % M
+16. ## Euler's Totient Function(Application in (a^b) % M = (a ^(b mod phi(M))) % M
     Euler’s Totient function Φ(n) for an input n is the count of numbers in {1, 2, 3, …, n-1} that are relatively prime to n, i.e., the numbers whose GCD (Greatest 
     Common Divisor) with n is 1.
     The idea is based on Euler’s product formula:-
@@ -165,7 +184,7 @@ https://codeforces.com/problemset/problem/1765/M
 5. Sum of values of totient functions of all divisors of n is equal to n. 
 ​
 ---
-16. ## Binary Exponentiation O(log B)
+17. ## Binary Exponentiation O(log B)
     ```cpp
        const int M = 1e9+7;
       //if a = 2 and b = 63 then overflow for ll will occur hence Modulo is must in 
@@ -186,7 +205,7 @@ Applications:-
 2. product of two very large numbers(just replace * with + and result = 0.
 3. applying permutaion P to S.
 ---
-17. ## Prime Factorization(rootN(log N))
+18. ## Prime Factorization(rootN(log N))
     ### (Not effecient in query problems as overall complexity will be t*rootN(Log N).
     concept:-
     1. Smallest divisor of any number is always prime(except 1)
@@ -208,7 +227,7 @@ Applications:-
           }
       }
 -----------------------------------------------------------
-18. ## Sieve of Eratosthenes for getting primes in some range in Nlog(log N) time:-
+19. ## Sieve of Eratosthenes for getting primes in some range in Nlog(log N) time:-
     ```cpp
     int main() {
     int n = 1e7+7;
@@ -235,7 +254,7 @@ Applications:-
 }
 
 ---------------------
-19. ## Prime Factorization in log N using Sieve
+20. ## Prime Factorization in log N using Sieve
     ### (Effecient in case of queries - NLog(Log N) + t*Log N is more effecient than t*rootN(Log N))
     ```cpp
     #include<bits/stdc++.h>
@@ -285,7 +304,7 @@ Applications:-
           }
       }    
 ---
-## Chinese Remainder Theorem
+21. ## Chinese Remainder Theorem
 ![Screenshot 2024-06-14 094540](https://github.com/KishanRaj0007/Competitive-Programming/assets/142702439/037866bd-6ec9-4e3d-b58b-899c31427e6f)
 ### Problem is to find minimum value of x.
 Note that gcd of 3, 4 and 5 is one and chinese remainder theorem is valid only if they are pairwise coprime.
@@ -301,6 +320,10 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
    2. prod is product of all given numbers (prod = num[0] * num[1] * ... * num[k-1], remember their pairwise gcd is 1)
    3. pp[i] is product of all divided by num [i] (pp[i] = prod / num[i])
    4. inv[i] = Modular Multiplicative Inverse of pp[i] with respect to num[i].
+      
+### NOTE: Do not use Inverse formula derived by Fermat Little Theorem instead use Extended Euclid Algorithm.
+   We cannot use A inverse = (A^(M-2)) % M to find inverse of A which is implemented by binary exponentiation because nums[i]
+   is not necessarily prime and This formula is used only if M is prime.
 
       //NLog N time
       ```cpp
