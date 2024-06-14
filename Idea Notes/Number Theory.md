@@ -260,6 +260,8 @@ Applications:-
       }    
 ---
 ## Chinese Remainder Theorem
+![Screenshot 2024-06-14 094540](https://github.com/KishanRaj0007/Competitive-Programming/assets/142702439/037866bd-6ec9-4e3d-b58b-899c31427e6f)
+### Problem is to find minimum value of x.
 
 
 
