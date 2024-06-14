@@ -97,6 +97,34 @@ https://codeforces.com/problemset/problem/1765/M
       If yes then print Possible
       Else print Not Possible
    --------------------------------------------------------------------------------------
+14. ## Modular Multiplicative inverse for finding A inverse with respect to M
+    ### CASE 1: When A and M are coprime (Extended Euclid Algorithm)
+    ```cpp
+    int findInverse(int a,int m){ //inv of a wrt m using Extended Euclid
+     int m0 = m, t, q; 
+     int x0 = 0, x1 = 1; 
+   
+     if (m == 1) return 0;
+     // Apply extended Euclid Algorithm 
+     while (a > 1) {  
+         q = a / m; 
+         t = m; 
+         m = a % m;
+         a = t; 
+         t = x0; 
+         x0 = x1 - q * x0; 
+         x1 = t; 
+     } 
+     // Make x1 positive 
+     if (x1 < 0) x1 += m0;
+     return x1;
+   }
+   ### CASE 2 : When M is prime and very very large
+   In this case A inverse = (A^(M-2)) % M. This should be done by binary exponentiation(17) as M is very big.
+
+
+
+   ---
 
 14. ## Fermat’s little theorem (application- (a/b) % M = (a % M)*(b inverse % M)) % M and b inverse = (b ^(M-2)) % M
     Here b ^(M-2) is solved by binary exponentiation in log N time.
