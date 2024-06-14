@@ -163,7 +163,7 @@ Applications:-
 17. ## Prime Factorization
     concept:-
     1. Smallest divisor of any number is always prime(except 1)
-    2. For a composite number N, there exist at least one prime number p such that 2 <= p <= sqrt(N)
+    2. For a composite number N, there exist at least one prime number p such that 2 <= p <= sqrt(N) and p divides N.
     ```cpp      
       void findPrimeFactors(long long n){
           vector<long long> x;
