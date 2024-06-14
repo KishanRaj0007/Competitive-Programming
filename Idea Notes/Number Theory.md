@@ -216,7 +216,7 @@ Applications:-
       using namespace std;
       #define ll long long
       
-      const int N = 100001;
+      const int N = 1e7+7;
       vector<int> spf(N,1); //stores smallest primefactor of every number
       
       void precomputeSPFBySieve(){ // NLog(Log N)
