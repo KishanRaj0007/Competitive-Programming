@@ -261,20 +261,64 @@ Applications:-
 ---
 ## Chinese Remainder Theorem
 ![Screenshot 2024-06-14 094540](https://github.com/KishanRaj0007/Competitive-Programming/assets/142702439/037866bd-6ec9-4e3d-b58b-899c31427e6f)
-### Problem is to find minimum value of x.
+### Problem is to find minimum value of x.(NLog N)
 Note that gcd of 3, 4 and 5 is one and chinese remainder theorem is valid only if they are coprime.
 Chinese Remainder Theorem states that there always exists an x that satisfies given congruences:- 
 
  x ≡ y (mod productOfNumbers) i.e., All those x when divided by product(3*4*5) will always give same remainder.
  But we use following formula to find value of x:-
  
- x =  ( Σ(rem[i]*pp[i]*inv[i]) ) % prod
+ x =  ( Σ(rem[i]*pp[i]*inv[i]) ) % prod  (To visualize see this video - https://www.youtube.com/watch?v=ru7mWZJlRQg )
    Where 0 <= i <= n-1
    
    1. rem[i] is given array of remainders
    2. prod is product of all given numbers (prod = num[0] * num[1] * ... * num[k-1], remember their pairwise gcd is 1)
    3. pp[i] is product of all divided by num [i] (pp[i] = prod / num[i])
    4. inv[i] = Modular Multiplicative Inverse of pp[i] with respect to num[i].
+      ```cpp
+      int findInverse(int a,int m){ //inv of a wrt m using Extended Euclid
+        int m0 = m, t, q; 
+        int x0 = 0, x1 = 1; 
+      
+        if (m == 1) return 0;
+        // Apply extended Euclid Algorithm 
+        while (a > 1) {  
+            q = a / m; 
+            t = m; 
+            m = a % m;
+            a = t; 
+            t = x0; 
+            x0 = x1 - q * x0; 
+            x1 = t; 
+        } 
+        // Make x1 positive 
+        if (x1 < 0) x1 += m0;
+        return x1;
+      }
+      
+      int minX(vector<int> nums, vector<int> rem, int size){ //nums is pairwise coprime
+          int pro = 1;
+          for(auto i : nums){
+              pro *= i;
+          }
+          int ans = 0;
+          for (int i = 0; i < size; ++i)
+          {
+              int pp = pro/nums[i];
+              ans += rem[i]* pp *(findInverse(pp,nums[i]));
+          }
+          ans %= pro;
+          return ans;
+      }
+      
+      int main() {
+            vector<int> nums = {3,4,5};
+            vector<int> rem = {2,2,1};
+            int res = minX(nums, rem, nums.size());
+            cout << res << endl;
+      }
+   ---
+   jknjk
 
 
 
