@@ -161,7 +161,7 @@ Applications:-
 3. applying permutaion P to S.
 ---
 17. ## Prime Factorization(rootN(log N))
-    ### (Not effecient in query problems).
+    ### (Not effecient in query problems as overall complexity will be t*rootN(Log N).
     concept:-
     1. Smallest divisor of any number is always prime(except 1)
     2. For a composite number N, there exist at least one prime number p such that 2 <= p <= sqrt(N) and p divides N.
@@ -182,7 +182,7 @@ Applications:-
           }
       }
 -----------------------------------------------------------
-18. ## Sieve of Eratosthenes for primes in some range in Nlog(log N) time:-
+18. ## Sieve of Eratosthenes for getting primes in some range in Nlog(log N) time:-
     ```cpp
     int main() {
     int n = 1e7+7;
@@ -209,9 +209,58 @@ Applications:-
 }
 
 ---------------------
-
+19. ## Prime Factorization in log N using Sieve
+    ### (Effecient in case of queries - NLog(Log N) + t*Log N compared to t*rootN(Log N))
+    ```cpp
+    #include<bits/stdc++.h>
+      using namespace std;
+      #define ll long long
+      
+      const int N = 100001;
+      vector<int> spf(N,1); //stores smallest primefactor of every number
+      
+      void precomputeSPFBySieve(){ // NLog(Log N)
+          spf[0] = 0;
+          spf[1] = 1;
+          for (int i = 2; i < N; ++i)
+          {
+              if(spf[i] == 1){
+                  for (int j = i; j < N; j+=i)
+                  {
+                      if(spf[j] == 1) spf[j] = i;
+                  }
+              }
+          }
+      }
+      //Log N time
+      vector<int> getPrimeFactors(int num){
+          vector<int> ans;
+          while(num != 1){
+              ans.push_back(spf[num]);
+              num = num/spf[num];
+          }
+          return ans;
+      }
+      
+      //NLog(Log N) + t*Log N
+      int main() {
+          precomputeSPFBySieve(); //precompute outside query
+          int t;
+          cin >> t;
+          while(t--){
+              int n;
+              cin >> n;
+              cout << "PF of " << n << ":- ";
+              vector<int> ret = getPrimeFactors(n);
+              for(auto x : ret){
+                  cout << x << " ";
+              }
+              cout << endl;
+          }
+      }    
 ---
-19.
+# 
+
 
 
 
