@@ -262,9 +262,29 @@ Applications:-
 ## Chinese Remainder Theorem
 ![Screenshot 2024-06-14 094540](https://github.com/KishanRaj0007/Competitive-Programming/assets/142702439/037866bd-6ec9-4e3d-b58b-899c31427e6f)
 ### Problem is to find minimum value of x.
+Note that gcd of 3, 4 and 5 is one and chinese remainder theorem is valid only if they are coprime.
 Chinese Remainder Theorem states that there always exists an x that satisfies given congruences:- 
 
  x ≡ y (mod productOfNumbers) i.e., All those x when divided by product will always give same remainder.
+ But we use following formula to find x:-
+ 
+ x =  ( Σ(rem[i]*pp[i]*inv[i]) ) % prod
+   Where 0 <= i <= n-1
+   
+   1. rem[i] is given array of remainders
+   2. prod is product of all given numbers (prod = num[0] * num[1] * ... * num[k-1], remember their pairwise gcd is 1)
+   3. pp[i] is product of all divided by num [i] (pp[i] = prod / num[i])
+   4. inv[i] = Modular Multiplicative Inverse of pp[i] with respect to num[i].
+
+
+
+
+
+
+
+ 
+         
+
 
 
 
