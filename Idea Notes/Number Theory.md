@@ -178,7 +178,7 @@ Applications:-
           }
       }
 -----------------------------------------------------------
-18. Sieve of Eratosthenes for primes in some range in Nlog(log N) time:-
+18. ## Sieve of Eratosthenes for primes in some range in Nlog(log N) time:-
     ```cpp
     int main() {
     int n = 1e7+7;
