@@ -160,7 +160,7 @@ Applications:-
 2. product of two very large numbers(just replace * with + and result = 0.
 3. applying permutaion P to S.
 ---
-17. ## Prime Factorization
+17. ## Prime Factorization(rootN(log N))
     concept:-
     1. Smallest divisor of any number is always prime(except 1)
     2. For a composite number N, there exist at least one prime number p such that 2 <= p <= sqrt(N) and p divides N.
