@@ -119,8 +119,8 @@ https://codeforces.com/problemset/problem/1765/M
      if (x1 < 0) x1 += m0;
      return x1;
    }
-   ### CASE 2 : When M is prime and very very large
-   In this case A inverse = (A^(M-2)) % M. This should be done by binary exponentiation(17) as M is very big.
+   ### CASE 2 : When M is prime.
+   In this case A inverse = (A^(M-2)) % M. This should be done by binary exponentiation given in point 17;
 
 
 
