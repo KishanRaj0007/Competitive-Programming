@@ -182,6 +182,7 @@ Applications:-
       }
 -----------------------------------------------------------
 18. ## Sieve of Eratosthenes for primes in some range in Nlog(log N) time:-
+    (Not useful in query related problem)
     ```cpp
     int main() {
     int n = 1e7+7;
