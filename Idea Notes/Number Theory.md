@@ -119,11 +119,9 @@ https://codeforces.com/problemset/problem/1765/M
      if (x1 < 0) x1 += m0;
      return x1;
    }
-   ### CASE 2 : When M is prime.
-   In this case A inverse = (A^(M-2)) % M. This should be done by binary exponentiation given in point 17;
-
-
-
+   ### NOTE: Do not use Inverse formula derived by Fermat Little Theorem.
+   We cannot use A inverse = (A^(M-2)) % M to find inverse of A which is implemented by binary exponentiation because nums[i]
+   is not necessarily prime and This formula is used only if M is prime.
    ---
 
 14. ## Fermat’s little theorem (application- (a/b) % M = (a % M)*(b inverse % M)) % M and b inverse = (b ^(M-2)) % M
