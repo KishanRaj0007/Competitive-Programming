@@ -262,7 +262,9 @@ Applications:-
 ## Chinese Remainder Theorem
 ![Screenshot 2024-06-14 094540](https://github.com/KishanRaj0007/Competitive-Programming/assets/142702439/037866bd-6ec9-4e3d-b58b-899c31427e6f)
 ### Problem is to find minimum value of x.
+Chinese Remainder Theorem states that there always exists an x that satisfies given congruences:- 
 
+ x ≡ y (mod productOfNumbers) i.e., All those x when divided by product will always give same remainder.
 
 
 
