@@ -397,10 +397,60 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
            2. __builtin_popcountll(n) - for long long int
            3. if((a&(1<<i)) != 0) count++; (check if ith bit is set or not)
        17. ### Bitwise operation in a range:
-           In these type of problem we will use precomputation to solve in O(1) time. Store all 32 bits of n numbers in 2d array. Precompute the
-           bits in specific range, store result in other array and apply operation(&, OR XOR) accordingly. For example precomputing for numbers in
-           range l to r for all its bits, we will find its prefix sum and store in arr. If prefix sum of ith bit for all numbers in range l to r is
-           equal to length of range(r-l+1) this means ith bit of all the numbers are set. 
+           In these type of problem we will use precomputation to solve in O(1) time. Store all 32 bits of n numbers in 2d array. Then Precompute
+           all bits, store result in other array and apply operations(&, OR XOR) accordingly. 
+           ```cpp
+           vector<vector<int>> prefixSum(vector<int> nums){
+           int n = nums.size();
+           //fill the array with bits
+           vector<vector<int>> temp(n + 1, vector<int>(32, 0));
+           /**  nth bit  n-1 n-2 ....1 0th bit
+            * n1 _  _    _    _
+            * n2 _  _    _    _   
+            * n3
+           */
+           for (int i = 1; i <= n; ++i){
+             int number = nums[i-1];
+             for(int j = 0; j < 32; ++j){
+               if((number & (1<<j)) != 0){ //precedence issue alert
+                 temp[i][j] = 1;
+               }
+             }
+           }
+           //calculate prefix sum
+           vector<vector<int>> ans(n+1, vector<int>(32,0));
+           for (int i = 0; i < 32; ++i)
+           {
+             for (int j = 1; j <= n; ++j)
+             {
+               ans[j][i] = ans[j-1][i]+temp[j][i];
+             }
+           }
+           return ans;
+         }
+         
+         // finding AND from l to r
+         int bitOperationInRange(vector<int> nums, int l, int r){
+           int range = r-l+1;
+           int result = 0;
+           vector<vector<int>> psum = prefixSum(nums);
+           for(int i =0; i < 32; ++i){
+             if((psum[r][i] - psum[l-1][i]) == range){
+               result += (1<<i);
+             }
+           }
+           return result;
+         }
+         
+         int main(){
+           vector<int> nums = {13,11,2,3,6};
+           int l = 3;
+           int r = 5;
+           int res = bitOperationInRange(nums,l,r);
+           cout << res << endl;
+         }
+---
+fdf
 
 
 
