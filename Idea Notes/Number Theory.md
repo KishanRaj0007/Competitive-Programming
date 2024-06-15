@@ -398,6 +398,7 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
            2. __builtin_popcountll(n) - for long long int
            3. if((a&(1<<i)) != 0) count++; (check if ith bit is set or not)
        18. ### Bitwise operation in a range:
+           (for example to find Bitwise AND for all elements of an array between position 2 and 4)
            In these type of problem we will use precomputation to solve in O(1) time. Store all 32 bits of n numbers in 2d array. Then Precompute
            all bits, store result in other array and apply operations(&, OR XOR) accordingly.
            #### For example in & -
