@@ -393,9 +393,9 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
       14. To unset ith bit : n = n & ~(1<<i)
       15. To toggle ith bit : n = n ^ (1<<i)
       16. To find bitcount(Total number of setbits) :-
-          a. __builtin_popcount(n) - for integers
-          b. __builtin_popcountll(n) - for long long int
-          c. if((a&(1<<i)) != 0) count++; (check if ith bit is set or not)
+          1. __builtin_popcount(n) - for integers
+          2. __builtin_popcountll(n) - for long long int
+          3. if((a&(1<<i)) != 0) count++; (check if ith bit is set or not)
       17. 
 
 
