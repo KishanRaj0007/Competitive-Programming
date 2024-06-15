@@ -382,12 +382,12 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
        10. Range of unsigned int is greater than signed int because it stores only non negative values and hence 1 bit of signed int gets wasted in sign.
        11. For printing binary representation of a number:-
            ```cpp
-        void printBinary(int n){
-           for (int i = 10; i >= 0; --i)
-           {
-             cout << ((n >> i)&1);
+             void printBinary(int n){
+              for (int i = 10; i >= 0; --i)
+              {
+                cout << ((n >> i)&1);
+              }
            }
-        }
        12. If n & (1<<i) != 0 then ith bit of n is set.
        13. To set ith bit : n = n | (1<<i)
        14. To unset ith bit : n = n & ~(1<<i)
