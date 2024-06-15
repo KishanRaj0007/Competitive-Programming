@@ -396,7 +396,11 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
            1. __builtin_popcount(n) - for integers
            2. __builtin_popcountll(n) - for long long int
            3. if((a&(1<<i)) != 0) count++; (check if ith bit is set or not)
-       17. 
+       17. ### Bitwise operation in a range:
+           In these type of problem we will use precomputation to solve in O(1) time. Store all 32 bits of n numbers in 2d array. Precompute the
+           bits in specific range, store result in other array and apply operation(&, OR XOR) accordingly. For example precomputing for numbers in
+           range l to r for all its bits, we will find its prefix sum and store in arr. If prefix sum is equal to length of range(r-l+1) this means
+           ith bit of all the numbers are set. 
 
 
 
