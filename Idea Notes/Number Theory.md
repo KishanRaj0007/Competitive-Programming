@@ -369,9 +369,34 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
             cout << res << endl;
       }
    ---
-   jknjk
-
-
+22. ## Bit Manipulation
+    1. 1<<n = 2^n (It has only nth bit set eg: 4 = 100)
+    2. Number just before 2^n i.e., 2^n - 1 has only 1 in its binary representation (eg: 3 = ..011)
+    3. Check whether n is power of 2 : return  ((n & (n - 1)) == 0); //100 & 011 = 000
+    4. n<<k = multiply by 2 k times
+    5. n>>k = divide by 2 k times
+    6. n&1 = check for odd
+    7. (upperCaseLetter | ' ') = corresponding lowercase letter
+    8. (lowerCaseLetter & '_') = corresponding uppercase letter
+    9. x^x = 0, x^0 = x, x^y^z = x^z^y = y^x^z
+    10. Range of unsigned int is greater than signed int because it stores only non negative values and hence 1 bit of signed int gets wasted in sign.
+    11. For printing binary representation of a number:-
+        ```cpp
+        void printBinary(int n){
+           for (int i = 10; i >= 0; --i)
+           {
+             cout << ((n >> i)&1);
+           }
+        }
+      12. If n & (1<<i) != 0 then ith bit of n is set.
+      13. To set ith bit : n = n | (1<<i)
+      14. To unset ith bit : n = n & ~(1<<i)
+      15. To toggle ith bit : n = n ^ (1<<i)
+      16. To find bitcount(Total number of setbits) :-
+          a. __builtin_popcount(n) - for integers
+          b. __builtin_popcountll(n) - for long long int
+          c. if((a&(1<<i)) != 0) count++; (check if ith bit is set or not)
+      17. 
 
 
 
