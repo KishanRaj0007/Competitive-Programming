@@ -427,7 +427,7 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
              }
            }
            return ans;
-         }
+           }
             // finding AND from l to r
             int bitOperationInRange(vector<int> nums, int l, int r){
               int range = r-l+1;
