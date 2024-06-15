@@ -393,14 +393,20 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
        14. To unset ith bit : n = n & ~(1<<i)
        15. To toggle ith bit : n = n ^ (1<<i)
        16.  result += (1<<i); //This is used to form complete binary representation of a desired number bit by bit.
-       17.  ### Clear the right-most set bit
+       17.  ```cpp
+            #pragma GCC target("popcnt") //use this otherwise these functions will run slowly in gcc and even in cpp 20
+            __builtin_ffs(int) // finds the position(not index) of the first (most right) set bit eg 00010010100-->3
+            __builtin_clz(unsigned int) the count of leading zeros
+            __builtin_ctz(unsigned int) the count of trailing zeros
+            __builtin_parity(x) the parity (even or odd) of the number of ones in the bit representation
+       19.  ### Clear the right-most set bit
           The expression n & (n-1) is used to turn off the rightmost set bit of a number n.  This works because the bitwise expression of n-1
           has all the digits flipped after the rightmost set bit of n including rightmost set bit.
           1. n =   1 1 0 1 0 0 0
           2. n-1 = 1 1 0 0 1 1 1
        18.  In most of the problems involving bit manipulation it is better to work bit by bit i.e., break down the problem into individual bits.
             Focus on solving the problem for a single bit position before moving on to the next.
-       19. To find bitcount(Total number of setbits) :-
+       20. To find bitcount(Total number of setbits) :-
            1. __builtin_popcount(n) - for integers
            2. __builtin_popcountll(n) - for long long int
            3. if((a&(1<<i)) != 0) count++; (check if ith bit is set or not)
@@ -418,7 +424,7 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
                       }
                       return count;
                   }
-       20. ### Bitwise operation in a range:
+       21. ### Bitwise operation in a range:
            (for example to find Bitwise AND for all elements of an array between position 2 and 4)
            In these type of problem we will use precomputation to solve in O(1) time. Store all 32 bits of n numbers in 2d array. Then Precompute
            all bits, store result in other array and apply operations(&, OR XOR) accordingly.
@@ -478,7 +484,7 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
               int res = bitOperationInRange(psum,l,r);
               cout << res << endl;
             }
-    21. ### Check if a number is divisible by power of 2
+    22. ### Check if a number is divisible by power of 2
         ```cpp
         bool isDivisibleByPowerOf2(int n, int k) {
              int powerOf2 = 1 << k;
