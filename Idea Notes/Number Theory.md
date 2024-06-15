@@ -428,27 +428,27 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
            }
            return ans;
          }
-         
-         // finding AND from l to r
-         int bitOperationInRange(vector<int> nums, int l, int r){
-           int range = r-l+1;
-           int result = 0;
-           vector<vector<int>> psum = prefixSum(nums);
-           for(int i =0; i < 32; ++i){
-             if((psum[r][i] - psum[l-1][i]) == range){
-               result += (1<<i);
-             }
-           }
-           return result;
-         }
-         
-         int main(){
-           vector<int> nums = {13,11,2,3,6};
-           int l = 3;
-           int r = 5;
-           int res = bitOperationInRange(nums,l,r);
-           cout << res << endl;
-         }
+    
+            // finding AND from l to r
+            int bitOperationInRange(vector<int> nums, int l, int r){
+              int range = r-l+1;
+              int result = 0;
+              vector<vector<int>> psum = prefixSum(nums);
+              for(int i =0; i < 32; ++i){
+                if((psum[r][i] - psum[l-1][i]) == range){
+                  result += (1<<i);
+                }
+              }
+              return result;
+            }
+            
+            int main(){
+              vector<int> nums = {13,11,2,3,6};
+              int l = 3;
+              int r = 5;
+              int res = bitOperationInRange(nums,l,r);
+              cout << res << endl;
+            }
 ---
 fdf
 
