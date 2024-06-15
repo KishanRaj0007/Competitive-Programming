@@ -392,15 +392,21 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
        13. To set ith bit : n = n | (1<<i)
        14. To unset ith bit : n = n & ~(1<<i)
        15. To toggle ith bit : n = n ^ (1<<i)
-       16. To find bitcount(Total number of setbits) :-
+       16.  result += (1<<i); //This is used to form complete binary representation of a desired number bit by bit.
+       17. To find bitcount(Total number of setbits) :-
            1. __builtin_popcount(n) - for integers
            2. __builtin_popcountll(n) - for long long int
            3. if((a&(1<<i)) != 0) count++; (check if ith bit is set or not)
-       17. ### Bitwise operation in a range:
+       18. ### Bitwise operation in a range:
            In these type of problem we will use precomputation to solve in O(1) time. Store all 32 bits of n numbers in 2d array. Then Precompute
            all bits, store result in other array and apply operations(&, OR XOR) accordingly.
-           For example in & - If the count of numbers with the j-th bit set in the range [l, r] is equal to the range size (r – l + 1), it means that
+           #### For example in & -
+           If the count of numbers with the j-th bit set in the range [l, r] is equal to the range size (r – l + 1), it means that
            all numbers in that range have their j-th bit set.
+           #### In case of XOR:
+           If the count of numbers with the j-th bit set in the range [l, r] is odd, it means that the j-th bit of the result should be set to 1. If the count is even, 
+           the j-th bit of the result should be set to 0.
+           
            ```cpp
            vector<vector<int>> prefixSum(vector<int> nums){
            int n = nums.size();
