@@ -393,11 +393,13 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
        14. To unset ith bit : n = n & ~(1<<i)
        15. To toggle ith bit : n = n ^ (1<<i)
        16.  result += (1<<i); //This is used to form complete binary representation of a desired number bit by bit.
-       17. To find bitcount(Total number of setbits) :-
+       17.  In most of the problems involving bit manipulation it is better to work bit by bit i.e., break down the problem into individual bits.
+            Focus on solving the problem for a single bit position before moving on to the next.
+       19. To find bitcount(Total number of setbits) :-
            1. __builtin_popcount(n) - for integers
            2. __builtin_popcountll(n) - for long long int
            3. if((a&(1<<i)) != 0) count++; (check if ith bit is set or not)
-       18. ### Bitwise operation in a range:
+       20. ### Bitwise operation in a range:
            (for example to find Bitwise AND for all elements of an array between position 2 and 4)
            In these type of problem we will use precomputation to solve in O(1) time. Store all 32 bits of n numbers in 2d array. Then Precompute
            all bits, store result in other array and apply operations(&, OR XOR) accordingly.
