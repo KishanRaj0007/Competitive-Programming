@@ -398,7 +398,9 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
            3. if((a&(1<<i)) != 0) count++; (check if ith bit is set or not)
        17. ### Bitwise operation in a range:
            In these type of problem we will use precomputation to solve in O(1) time. Store all 32 bits of n numbers in 2d array. Then Precompute
-           all bits, store result in other array and apply operations(&, OR XOR) accordingly. 
+           all bits, store result in other array and apply operations(&, OR XOR) accordingly.
+           For example in & - If the count of numbers with the j-th bit set in the range [l, r] is equal to the range size (r – l + 1), it means that
+           all numbers in that range have their j-th bit set.
            ```cpp
            vector<vector<int>> prefixSum(vector<int> nums){
            int n = nums.size();
