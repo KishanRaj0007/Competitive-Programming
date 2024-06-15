@@ -494,8 +494,10 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
           return n && !(n & (n - 1));
        }
 ---
-   23.  
-        
+   23. ## Some other tricks
+       1. n & (n+1) removes all trailing ones 1 1 0 1 1 1--->1 1 0 0 0 0
+       2. n | (n+1) sets the last cleared bit 1 1 0 1 0 1--->1 1 0 1 1 1
+       3. The result of 𝑛 & −𝑛 gives you a number that has only the lowest set bit of 𝑛 set to 1.  1 1 0 1 0 0--->0 0 0 1 0 0      
 ---
    24. 
        
