@@ -46,7 +46,7 @@ Example - https://codeforces.com/problemset/problem/1878/A
 in vector saves much time if compared to brute worst case. By precomputation you are now just required to print you answer only in constant or linear time.
   
 Example - https://codeforces.com/problemset/problem/1766/A
-
+The total time complexity is O(t NlogN) where t is 1e4 and N is 999999 which leads to TLE because 1e7 iterations take about 1second and here is 1e10 iterations
 BRUTE FORCE:-
     
     ```cpp
@@ -72,7 +72,7 @@ BRUTE FORCE:-
           }
           cout << answer <<endl;
       }
-The total time complexity is O(t NlogN) where t is 1e4 and N is 999999 which leads to TLE because 1e7 iterations take about 1second and here is 1e10 iterations
+  
 ---
 OPTIMIZED: PRECOMPUTATION
     ```cpp
