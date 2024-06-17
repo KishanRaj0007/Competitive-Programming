@@ -16,8 +16,12 @@
          i.> vector<vector<int>> grid(n, vector<int>(m)); //for 2d array
 
 ---
+0. Given two arrays, A and B, both of the same size 𝑛, you are required to find the minimum possible value of the sum of products of corresponding elements of the two a 
+   arrays.
+   
+  Sol: To solve this arrange first array in ascending order and second one in descending order.
 
-1. We can use inbuilt map data structure to store frequency of each element of an array or vector while taking the input from user:-
+2. We can use inbuilt map data structure to store frequency of each element of an array or vector while taking the input from user:-
 
   https://codeforces.com/problemset/problem/1890/A
   https://codeforces.com/problemset/problem/1807/D
