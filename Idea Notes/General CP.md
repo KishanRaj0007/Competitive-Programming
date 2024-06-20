@@ -135,7 +135,7 @@ https://codeforces.com/problemset/problem/1850/D
 https://codeforces.com/problemset/problem/1837/B
 
 ---
-5.> To find the length of the longest consecutive sequence of identical elements in an array we will find an array f whose a[i] will give the frequency count of element i, algo is:-
+5. To find the length of the longest consecutive sequence of identical elements in an array we will find an array f whose a[i] will give the frequency count of element i, algo is:-
 
    input - a: 1 2 2 2 2
    output - fa :- fa: [0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0]  (indexing starts from 1)
@@ -153,8 +153,46 @@ https://codeforces.com/problemset/problem/1837/B
     }
     fa[a[n]] = max(fa[a[n]], n - p + 1);
 ---
+6. ## Josephus Problem:
+   Consider a game where there are n children (numbered 1,2,...,n) in a circle. During the game, repeatedly k children are skipped and one child is removed from the 
+   circle.  The process stops when one number remains. It is required to find the last number.
 
+   example - for n = 7 and k = 2, order is 3 6 2 7 5 1 4 , hence last element is 4.
 
+   If k = 1 then you can also use queue implementation:-
+   https://cses.fi/paste/35ed8e010e844a749277fa/
+   
+   ### kLog(N)
+       ```cpp
+       int josephus(int n, int k) {
+             if (n == 1)
+                 return 0;
+             if (k == 1)
+                 return n-1;
+             if (k > n)
+                 return (josephus(n-1, k) + k) % n;
+             int cnt = n / k;
+             int res = josephus(n - cnt, k);
+             res -= n % k;
+             if (res < 0)
+                 res += n;
+             else
+                 res += res / (k - 1);
+             return res;
+         }
+---  
+   ### O(N)
+   ```cpp
+   //0 based indexing so if k=2 then pass k = 3 to get 4
+   int josephus(int n, int k) {
+    int res = 0;
+    for (int i = 1; i <= n; ++i)
+      res = (res + k) % i;
+    return res + 1;
+   }
+---
+
+   
 
 
 
