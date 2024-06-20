@@ -180,7 +180,7 @@ https://codeforces.com/problemset/problem/1837/B
                  res += res / (k - 1);
              return res;
          }
----  
+   
    ### O(N)
    ```cpp
    //0 based indexing so if k=2 then pass k = 3 to get 4
@@ -190,10 +190,8 @@ https://codeforces.com/problemset/problem/1837/B
       res = (res + k) % i;
     return res + 1;
    }
+
 ---
-
-   
-
 
 
 
