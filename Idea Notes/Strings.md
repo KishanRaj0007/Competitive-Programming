@@ -1,7 +1,7 @@
 # STRINGS
 
 1. ## SUBSTRING CHECK
-To check for substring s in sting x, we use x.find(s). It searches for the first occurrence of the substring s within the string x. It returns the starting index (position) of the first occurrence of s
+To check for substring s in sting x, we use x.find(s). It searches for the first occurrence of the substring s within the string x. It returns the starting index of the first occurrence of s
 in x. If the substring s is not found, find returns a special constant value std::string::npos.
 
        if(x.find(s) == string::npos){
