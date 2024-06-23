@@ -72,7 +72,145 @@ https://codeforces.com/contest/1883/problem/B
 6. To cound distinct letters or characters use set(for sorting purpose) or unordered_set.
 https://codeforces.com/problemset/problem/1791/D
 ---
+7. ## Knuth-Morris-Pratt (KMP) Algorithm [O(n+m)]
+   Use when: You need to find all occurrences of a pattern string within a text string efficiently (with preprocessing).
+   ```cpp
+   // Preprocess the pattern to create the lps array
+       vector<int> computeLPSArray(string pattern) {
+           int m = pattern.length();
+           vector<int> lps(m, 0);
+           int len = 0;
+           int i = 1;
+           while (i < m) {
+               if (pattern[i] == pattern[len]) {
+                   len++;
+                   lps[i] = len;
+                   i++;
+               } else {
+                   if (len != 0) {
+                       len = lps[len - 1];
+                   } else {
+                       lps[i] = 0;
+                       i++;
+                   }
+               }
+           }
+           return lps;
+       }
 
+   // KMP search algorithm
+       void KMPSearch(string text, string pattern) {
+           int n = text.length();
+           int m = pattern.length();
+           vector<int> lps = computeLPSArray(pattern);
+           int i = 0;
+           int j = 0;
+           while (i < n) {
+               if (pattern[j] == text[i]) {
+                   i++;
+                   j++;
+               }
+               if (j == m) {
+                   cout << "Found pattern at index " << i - j << endl;
+                   j = lps[j - 1];
+               } else if (i < n && pattern[j] != text[i]) {
+                   if (j != 0) {
+                       j = lps[j - 1];
+                   } else {
+                       i++;
+                   }
+               }
+           }
+       }
+---
+8. ## Z-Algorithm [O(n+m)]
+   Use when: You need to find all occurrences of a pattern within a text string or want to compute matching prefixes efficiently.
+   ```cpp
+   // Z-Algorithm to compute Z array
+       vector<int> computeZArray(string s) {
+           int n = s.length();
+           vector<int> Z(n, 0);
+           int L = 0, R = 0, K;
+           for (int i = 1; i < n; ++i) {
+               if (i > R) {
+                   L = R = i;
+                   while (R < n && s[R] == s[R - L])
+                       R++;
+                   Z[i] = R - L;
+                   R--;
+               } else {
+                   K = i - L;
+                   if (Z[K] < R - i + 1)
+                       Z[i] = Z[K];
+                   else {
+                       L = i;
+                       while (R < n && s[R] == s[R - L])
+                           R++;
+                       Z[i] = R - L;
+                       R--;
+                   }
+               }
+           }
+           return Z;
+       }
+   // Z search algorithm
+       void ZSearch(string text, string pattern) {
+           string concat = pattern + "$" + text;
+           vector<int> Z = computeZArray(concat);
+           int patternLength = pattern.length();
+           for (int i = 0; i < Z.size(); ++i) {
+               if (Z[i] == patternLength) {
+                   cout << "Found pattern at index " << i - patternLength - 1 << endl;
+               }
+           }
+       }
+---
+9. ## Rabin-Karp Algorithm [O(n*m) - Worst case]
+    Use when: You need to find occurrences of a pattern within a text string using hashing (useful when dealing with multiple pattern searches).
+   ```cpp
+   #define d 256
+   #define q 101 // A prime number
+
+    void RabinKarpSearch(string pattern, string text) {
+    int m = pattern.length();
+    int n = text.length();
+    int i, j;
+    int p = 0; // hash value for pattern
+    int t = 0; // hash value for text
+    int h = 1;
+
+    // The value of h would be "pow(d, m-1)%q"
+    for (i = 0; i < m - 1; i++)
+        h = (h * d) % q;
+
+    // Calculate the hash value of pattern and first window of text
+    for (i = 0; i < m; i++) {
+        p = (d * p + pattern[i]) % q;
+        t = (d * t + text[i]) % q;
+    }
+
+    // Slide the pattern over text one by one
+    for (i = 0; i <= n - m; i++) {
+        // Check the hash values of current window of text and pattern
+        if (p == t) {
+            // Check for characters one by one
+            for (j = 0; j < m; j++) {
+                if (text[i + j] != pattern[j])
+                    break;
+            }
+            if (j == m)
+                cout << "Pattern found at index " << i << endl;
+        }
+
+        // Calculate hash value for next window of text
+        if (i < n - m) {
+            t = (d * (t - text[i] * h) + text[i + m]) % q;
+            if (t < 0)
+                t = (t + q);
+        }
+    }
+   }
+---
 
 
 
