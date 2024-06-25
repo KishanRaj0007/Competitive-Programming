@@ -211,6 +211,17 @@ https://codeforces.com/problemset/problem/1791/D
     }
    }
 ---
+10. ### Handling ahead and back index at same time
+    ```cpp
+        // Ensure no digit comes after a letter
+    bool foundLetter = false;
+    for (char ch : s) {
+        if (isalpha(ch))
+            foundLetter = true;
+        else if (foundLetter && isdigit(ch))
+            return false;
+    }
+---
 
 
 
