@@ -216,11 +216,11 @@ https://codeforces.com/problemset/problem/1791/D
         // Ensure no digit comes after a letter
     bool foundLetter = false;
     for (char ch : s) {
-        if (isalpha(ch))
+        if (isalpha(ch)) //isalphs(ch) is inbuilt function
             foundLetter = true;
-        else if (foundLetter && isdigit(ch))
+        else if (foundLetter && isdigit(ch)) //isdigit(ch) is also a inbuilt function
             return false;
-    }
+    } //is_sorted(s.begin(),s.end()) is also an inbuilt function
 ---
 
 
