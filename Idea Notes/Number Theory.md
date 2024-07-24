@@ -380,7 +380,16 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
        8. (lowerCaseLetter & '_') = corresponding uppercase letter
        9. x^x = 0, x^0 = x, x^y^z = x^z^y = y^x^z
        10. Range of unsigned int is greater than signed int because it stores only non negative values and hence 1 bit of signed int gets wasted in sign.
-       11. For printing binary representation of a number:-
+       11. Convert binary to decimal
+           ```cpp
+           int convertdecimal(vector<int> v){
+                int ans=0;
+                for(int i=0; i<64; i++){
+                    ans+=v[i]*pow(2,i);
+                }
+                return ans;
+            }
+       13. For printing binary representation of a number:-
            ```cpp
              void printBinary(int n){
               for (int i = 10; i >= 0; --i)
@@ -388,18 +397,18 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
                 cout << ((n >> i)&1);
               }
            }
-       12. If n & (1<<i) != 0 then ith bit of n is set.
-       13. To set ith bit : n = n | (1<<i)
-       14. To unset ith bit : n = n & ~(1<<i)
-       15. To toggle ith bit : n = n ^ (1<<i)
-       16.  result += (1<<i); //This is used to form complete binary representation of a desired number bit by bit.
-       17.  ```cpp
+       14. If n & (1<<i) != 0 then ith bit of n is set.
+       15. To set ith bit : n = n | (1<<i)
+       16. To unset ith bit : n = n & ~(1<<i)
+       17. To toggle ith bit : n = n ^ (1<<i)
+       18.  result += (1<<i); //This is used to form complete binary representation of a desired number bit by bit.
+       19.  ```cpp
             #pragma GCC target("popcnt") //use this otherwise these functions will run slowly in gcc and even in cpp 20
             __builtin_ffs(int) // finds the position(not index) of the first (most right) set bit eg 00010010100-->3
             __builtin_clz(unsigned int) the count of leading zeros
             __builtin_ctz(unsigned int) the count of trailing zeros
             __builtin_parity(x) the parity (even or odd) of the number of ones in the bit representation
-       19.  ### Clear the right-most set bit
+       20.  ### Clear the right-most set bit
           The expression n & (n-1) is used to turn off the rightmost set bit of a number n.  This works because the bitwise expression of n-1
           has all the digits flipped after the rightmost set bit of n including rightmost set bit.
           1. n =   1 1 0 1 0 0 0
