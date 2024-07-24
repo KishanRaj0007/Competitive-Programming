@@ -382,12 +382,19 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
        10. Range of unsigned int is greater than signed int because it stores only non negative values and hence 1 bit of signed int gets wasted in sign.
        11. Convert binary to decimal
            ```cpp
-           int convertdecimal(vector<int> v){
-                int ans=0;
-                for(int i=0; i<64; i++){
-                    ans+=v[i]*pow(2,i);
+           int binaryToDecimal(int n)
+            {
+                int num = n;
+                int dec_value = 0;
+                int base = 1;
+                int temp = num;
+                while (temp) {
+                    int last_digit = temp % 10;
+                    temp = temp / 10;
+                    dec_value += last_digit * base;
+                    base = base * 2;
                 }
-                return ans;
+                return dec_value;
             }
        13. For printing binary representation of a number:-
            ```cpp
