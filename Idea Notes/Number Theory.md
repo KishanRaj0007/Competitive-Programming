@@ -404,7 +404,7 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
                 cout << ((n >> i)&1);
               }
            }
-       14. If n & (1<<i) != 0 then ith bit of n is set.
+       14. If n & (1<<i) != 0 then ith bit of n is set.(alternate method - 1ll & (n >> i))
        15. To set ith bit : n = n | (1<<i)
        16. To unset ith bit : n = n & ~(1<<i)
        17. To toggle ith bit : n = n ^ (1<<i)
