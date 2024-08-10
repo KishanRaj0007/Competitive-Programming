@@ -522,13 +522,13 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
        3. The result of 𝑛 & −𝑛 gives you a number that has only the lowest set bit of 𝑛 set to 1.  1 1 0 1 0 0--->0 0 0 1 0 0      
 ---
    24. ## Bitwise practice problems (Div 2 B)
-       https://codeforces.com/contest/1973/problem/B
-       https://codeforces.com/contest/1994/problem/B
-       https://codeforces.com/contest/1884/problem/B
-       https://codeforces.com/contest/1870/problem/B
-       https://codeforces.com/contest/1867/problem/B
-       https://codeforces.com/contest/1847/problem/B
-       https://codeforces.com/contest/1842/problem/B
+       1. https://codeforces.com/contest/1973/problem/B
+       2. https://codeforces.com/contest/1994/problem/B
+       3. https://codeforces.com/contest/1884/problem/B
+       4. https://codeforces.com/contest/1870/problem/B
+       5. https://codeforces.com/contest/1867/problem/B
+       6. https://codeforces.com/contest/1847/problem/B
+       7. https://codeforces.com/contest/1842/problem/B
        
        
 
