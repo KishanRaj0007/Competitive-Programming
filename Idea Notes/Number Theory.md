@@ -530,10 +530,67 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
        6. https://codeforces.com/contest/1847/problem/B
        7. https://codeforces.com/contest/1842/problem/B
 ---
+25. Binary Search
 
-       
-       
+    # Binary Search: Finding Maximum and Minimum `x` for `f(x) = true`
 
+      Binary search can be adapted to find either the **maximum** or **minimum** value of `x` that satisfies a condition represented by `f(x)`. Below are the two main 
+      algorithms and when to use them.
+      
+      ## 1. Finding the Maximum `x` Such That `f(x) = true`
+      
+      ### Concept
+      - **Goal**: Find the highest value of `x` in the range `[lo, hi]` for which `f(x)` is `true`.
+      - **Usage**: Use this when `f(x)` transitions from `true` to `false` as `x` increases (monotonically decreasing behavior).
+
+      ### Code Implementation
+      ```cpp
+      #include <bits/stdc++.h>
+      using namespace std;
+      
+      int last_true(int lo, int hi, function<bool(int)> f) {
+          lo--; // Start with an invalid value to handle no valid case
+          while (lo < hi) {
+              int mid = lo + (hi - lo + 1) / 2; // Round up to avoid infinite loop
+              if (f(mid)) {
+                  lo = mid; // Move up if `f(mid)` is true
+              } else {
+                  hi = mid - 1; // Move down if `f(mid)` is false
+              }
+          }
+          return lo;
+      }
+      
+      // Example usage
+      int main() {
+          cout << last_true(2, 10, [](int x) { return x * x <= 30; }) << endl; // Outputs: 5
+      }
+   ---
+   ## 2. Finding the Minimum `x` Such That `f(x) = true`
+
+   ### Concept
+   - **Goal**: Find the lowest value of `x` in the range `[lo, hi]` for which `f(x)` is `true`.
+   - **Usage**: Use this when `f(x)` transitions from `false` to `true` as `x` increases (monotonically increasing behavior).
+
+      ### Code Implementation
+      ```cpp
+      #include <bits/stdc++.h>
+      using namespace std;
+      
+      int first_true(int lo, int hi, function<bool(int)> f) {
+          hi++; // Move `hi` up to handle no valid case
+          while (lo < hi) {
+              int mid = lo + (hi - lo) / 2; // Standard mid calculation
+              if (f(mid)) {
+                  hi = mid; // Move down if `f(mid)` is true
+              } else {
+                  lo = mid + 1; // Move up if `f(mid)` is false
+              }
+          }
+          return lo;
+      }
+---
+26. 
 
 
 
