@@ -530,9 +530,9 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
        6. https://codeforces.com/contest/1847/problem/B
        7. https://codeforces.com/contest/1842/problem/B
 ---
-25. Binary Search
+25. # Binary Search
 
-    # Binary Search: Finding Maximum and Minimum `x` for `f(x) = true`
+    ## Binary Search: Finding Maximum and Minimum `x` for `f(x) = true`
 
       Binary search can be adapted to find either the **maximum** or **minimum** value of `x` that satisfies a condition represented by `f(x)`. Below are the two main 
       algorithms and when to use them.
@@ -561,10 +561,6 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
           return lo;
       }
       
-      // Example usage
-      int main() {
-          cout << last_true(2, 10, [](int x) { return x * x <= 30; }) << endl; // Outputs: 5
-      }
    ---
    ## 2. Finding the Minimum `x` Such That `f(x) = true`
 
