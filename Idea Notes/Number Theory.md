@@ -536,6 +536,7 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
 
       Binary search can be adapted to find either the **maximum** or **minimum** value of `x` that satisfies a condition represented by `f(x)`. Below are the two main 
       algorithms and when to use them.
+      For more details go to - https://usaco.guide/silver/binary-search?lang=cpp#implementation-1
       
       ## 1. Finding the Maximum `x` Such That `f(x) = true`
       
