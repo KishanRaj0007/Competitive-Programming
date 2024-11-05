@@ -589,7 +589,8 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
 ---
 26. ## Binary Search Problems
     1. https://codeforces.com/problemset/problem/1873/E
-    2. 
+    2. https://codeforces.com/problemset/problem/1850/E
+    3. 
 
 
 
