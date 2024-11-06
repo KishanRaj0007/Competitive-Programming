@@ -194,13 +194,13 @@ https://codeforces.com/problemset/problem/1837/B
 ---
 7. ## Finding number of elements in sorted array greater than number x in O(Log N).
    ```cpp
-   vector<int> a = {1,2,3,4,5,6}; //array must be sorted
+    vector<int> a = {1,2,3,4,5,6}; //array must be sorted
     int x = 4;
     auto justGreaterVal = upper_bound(a.begin(),a.end(),x);//returns iterator of 5
     int index = justGreaterVal-a.begin();//iterator converted to index
     cout << a.size()-index << endl;
-   
-practice problem --> https://codeforces.com/problemset/problem/1827/A
+
+#### practice problem --> https://codeforces.com/problemset/problem/1827/A
 ---
 
 
