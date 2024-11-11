@@ -142,8 +142,9 @@ https://codeforces.com/problemset/problem/1837/B
     
     vector<int> fa(n + n + 1); //will store the maximum lengths of consecutive identical elements and store in i. fa[2] will give frequency of longest consecutive 2
     int p = 1; // p variable tracks the start of the current segment of identical elements.
-    // This loop traverses the array a and calculates the longest subarray for each unique element. 
-    for (int i = 2; i <= n; ++i)
+    // This loop traverses the array a and calculates the longest subarray for each unique element.
+   ```cpp
+       for (int i = 2; i <= n; ++i)
     {
         if (a[i] != a[i - 1])
         {
