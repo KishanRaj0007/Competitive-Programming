@@ -131,8 +131,8 @@ Thus, the time complexity per test case is 𝑂(𝑚), and for 𝑡 test cases, 
       ans = max(ans,count);
     }
 
-https://codeforces.com/problemset/problem/1850/D
-https://codeforces.com/problemset/problem/1837/B
+1. https://codeforces.com/problemset/problem/1837/B
+2. https://codeforces.com/problemset/problem/1850/D
 
 ---
 5. To find the length of the longest consecutive sequence of identical elements in an array we will find an array f whose a[i] will give the frequency count of element i, algo is:-
