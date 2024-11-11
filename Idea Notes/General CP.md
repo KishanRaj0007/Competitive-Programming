@@ -131,8 +131,8 @@ Thus, the time complexity per test case is 𝑂(𝑚), and for 𝑡 test cases, 
       ans = max(ans,count);
     }
 
-1. https://codeforces.com/problemset/problem/1837/B
-2. https://codeforces.com/problemset/problem/1850/D
+  1. https://codeforces.com/problemset/problem/1837/B
+  2. https://codeforces.com/problemset/problem/1850/D
 
 ---
 5. To find the length of the longest consecutive sequence of identical elements in an array we will find an array f whose a[i] will give the frequency count of element i, algo is:-
@@ -144,10 +144,8 @@ Thus, the time complexity per test case is 𝑂(𝑚), and for 𝑡 test cases, 
     int p = 1; // p variable tracks the start of the current segment of identical elements.
     // This loop traverses the array a and calculates the longest subarray for each unique element.
    ```cpp
-       for (int i = 2; i <= n; ++i)
-    {
-        if (a[i] != a[i - 1])
-        {
+       for (int i = 2; i <= n; ++i){
+        if(a[i] != a[i - 1]){
             fa[a[i - 1]] = max(fa[a[i - 1]], i - p);
             p = i;
         }
