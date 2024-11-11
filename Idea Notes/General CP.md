@@ -21,6 +21,8 @@
    arrays.
    
   Sol: To solve this arrange first array in ascending order and second one in descending order.
+  
+---
 
 2. We can use inbuilt map data structure to store frequency of each element of an array or vector while taking the input from user:-
 
