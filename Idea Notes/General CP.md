@@ -206,7 +206,10 @@ There is a function lower_bound which returns iterator of that element which is 
 
 #### practice problem --> https://codeforces.com/problemset/problem/1827/A
 ---
-
+8. ## Ceil Division
+   If we want to divide x with i, such that i is positive integer and return its ceiling value,       then we can use (x+i-1)/i which effectively returns ceiling of the division without needing to 
+   convert to floating point or explicitly use a ceiling function.
+---
 
 
 
