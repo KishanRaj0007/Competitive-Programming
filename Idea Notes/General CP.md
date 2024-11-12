@@ -194,13 +194,15 @@ Thus, the time complexity per test case is 𝑂(𝑚), and for 𝑡 test cases, 
    }
 
 ---
-7. ## Finding number of elements in sorted array greater than number x in O(Log N).
+7. ## Finding number of elements in sorted array strictly greater than number x in O(Log N).
    ```cpp
     vector<int> a = {1,2,3,4,5,6}; //array must be sorted
     int x = 4;
     auto justGreaterVal = upper_bound(a.begin(),a.end(),x);//returns iterator of 5
     int index = justGreaterVal-a.begin();//iterator converted to index
     cout << a.size()-index << endl;
+
+There is a function lower_bound which returns iterator of that element which is not less than given element. Also note that while finding total elements from index i to end if you have given an iterator of i (say it) you can find it using :- a.end()-it;
 
 #### practice problem --> https://codeforces.com/problemset/problem/1827/A
 ---
