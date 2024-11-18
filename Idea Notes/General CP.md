@@ -15,6 +15,31 @@
           cout.tie(nullptr);
           It ensures faster input and output operations, which is crucial for handling large input sizes efficiently.
          i.> vector<vector<int>> grid(n, vector<int>(m)); //for 2d array
+---
+0. My old cpp template
+   ```cpp
+            <snippet>
+             <content><![CDATA[
+         #include<bits/stdc++.h>
+         using namespace std;
+         #define ll long long
+         const ll M = 0;
+         
+         int main() {
+             ios_base::sync_with_stdio(false);
+             cin.tie(nullptr);
+             cout.tie(nullptr);
+             
+             $1
+         }
+         ]]></content>
+             <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+             <tabTrigger>template</tabTrigger>
+             <!-- Optional: Set a scope to limit where the snippet will trigger -->
+             <!-- <scope>source.python</scope> -->
+         </snippet>
+
+
 
 ---
 0. Given two arrays, A and B, both of the same size 𝑛, you are required to find the minimum possible value of the sum of products of corresponding elements of the two a 
