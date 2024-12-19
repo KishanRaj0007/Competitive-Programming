@@ -384,15 +384,13 @@ Chinese Remainder Theorem states that there always exists an x that satisfies gi
            ```cpp
            int binaryToDecimal(int n)
             {
-                int num = n;
                 int dec_value = 0;
                 int base = 1;
-                int temp = num;
-                while (temp) {
-                    int last_digit = temp % 10;
-                    temp = temp / 10;
+                while (n) {
+                    int last_digit = n % 10;
                     dec_value += last_digit * base;
                     base = base * 2;
+                    n = n/10;
                 }
                 return dec_value;
             }
