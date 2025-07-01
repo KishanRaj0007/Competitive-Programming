@@ -1,5 +1,5 @@
 ## Pattern 1
-
+Problem Name = Three Activities codeforces. (Div 3 D)
 ```
 30 20 10 1
 30 5 15 20
@@ -11,7 +11,41 @@ You have to select 1 element from row 1, one from row 2 and one from row 3 such 
 
 Solution:-
 ```
-r
+vector<int> tempA = solve(a);
+        vector<int> tempB = solve(b);
+        vector<int> tempC = solve(c);        
+        for(int i : tempA){
+            for(int j : tempB){
+                for(int k : tempC){
+                    if(i!=j && j!= k && i!=k) res = max(res, a[i]+b[j]+c[k]);
+                }
+            }
+        }
+        cout << res << endl;
+
+// finding the index of top 3 numbers and storing in tempA, tempB and tempC
+vector<int> solve(vector<int> nums){
+    vector<int> arr(3);
+    int mx1 = -1, mx2 = -1, mx3 = -1;
+    for(int i = 0; i<nums.size(); i++){
+        if(mx1 == -1 || nums[i]>nums[mx1]){
+            mx3 = mx2;
+            mx2 = mx1;
+            mx1 = i;
+        }
+        else if(mx2 == -1 || nums[i] > nums[mx2]){
+            mx3 = mx2;
+            mx2 = i;
+        }
+        else if(mx3 == -1 || nums[i] > nums[mx3]){
+            mx3 = i;
+        }
+    }
+    arr[0] = mx1;
+    arr[1] = mx2;
+    arr[2] = mx3;
+    return arr;
+}
 ```
 ---
 
