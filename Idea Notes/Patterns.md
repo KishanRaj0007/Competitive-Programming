@@ -12,16 +12,16 @@ You have to select 1 element from row 1, one from row 2 and one from row 3 such 
 Solution:-
 ```
 vector<int> tempA = solve(a);
-        vector<int> tempB = solve(b);
-        vector<int> tempC = solve(c);        
-        for(int i : tempA){
-            for(int j : tempB){
-                for(int k : tempC){
-                    if(i!=j && j!= k && i!=k) res = max(res, a[i]+b[j]+c[k]);
-                }
-            }
+vector<int> tempB = solve(b);
+vector<int> tempC = solve(c);        
+for(int i : tempA){
+    for(int j : tempB){
+        for(int k : tempC){
+            if(i!=j && j!= k && i!=k) res = max(res, a[i]+b[j]+c[k]);
         }
-        cout << res << endl;
+    }
+}
+cout << res << endl;
 
 // finding the index of top 3 numbers and storing in tempA, tempB and tempC
 vector<int> solve(vector<int> nums){
