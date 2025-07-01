@@ -1,9 +1,9 @@
 ## Pattern 1
 Problem Name: Three Activities codeforces. (Div 3 D)
 ```
-30 20 10 1
-30 5 15 20
-30 25 10 10
+a -> 30 20 10 1
+b -> 30 5 15 20
+c -> 30 25 10 10
 ```
 You have to select 1 element from row 1, one from row 2 and one from row 3 such that:-
 - sum of three elements is maximum possible
