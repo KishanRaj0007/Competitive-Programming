@@ -1,5 +1,5 @@
 ## Pattern 1
-Problem Name = Three Activities codeforces. (Div 3 D)
+Problem Name: Three Activities codeforces. (Div 3 D)
 ```
 30 20 10 1
 30 5 15 20
