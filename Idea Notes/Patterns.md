@@ -50,3 +50,10 @@ vector<int> solve(vector<int> nums){
 ---
 
 ## Pattern 2
+ Whenever you think x≡y(mod m), it means x−y is an integer multiple of m
+
+---
+
+## Pattern 3
+
+
