@@ -238,7 +238,7 @@ Applications:-
     for (int i = 2; i < n; ++i)
     {
         if(isprime[i]){
-            for (int j = i*2; j < n; j+=i)
+            for (int j = i*i; j < n; j+=i)
             {
                 isprime[j] = false;
             }
